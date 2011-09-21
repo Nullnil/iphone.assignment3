@@ -16,10 +16,10 @@
 		A6D76233142366EE009479AC /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D76231142366EE009479AC /* MainWindow.xib */; };
 		A6D76236142366EE009479AC /* ImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D76235142366EE009479AC /* ImageController.m */; };
 		A6D76239142366EE009479AC /* ShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D76238142366EE009479AC /* ShareController.m */; };
-		A6D7623C142366EE009479AC /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D7623A142366EE009479AC /* FirstView.xib */; };
-		A6D7623F142366EE009479AC /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D7623D142366EE009479AC /* SecondView.xib */; };
+		A6D7623C142366EE009479AC /* ImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D7623A142366EE009479AC /* ImageController.xib */; };
+		A6D7623F142366EE009479AC /* ShareController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D7623D142366EE009479AC /* ShareController.xib */; };
 		A6D762481423693D009479AC /* MapController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D762461423693D009479AC /* MapController.m */; };
-		A6D762491423693D009479AC /* ThirdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D762471423693D009479AC /* ThirdView.xib */; };
+		A6D762491423693D009479AC /* MapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D762471423693D009479AC /* MapController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,13 +36,13 @@
 		A6D76232142366EE009479AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		A6D76234142366EE009479AC /* ImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageController.h; sourceTree = "<group>"; };
 		A6D76235142366EE009479AC /* ImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageController.m; sourceTree = "<group>"; };
-		A6D76237142366EE009479AC /* ShareController.h */ = {isa = PBXFileReference; path = ShareController.h; sourceTree = "<group>"; };
+		A6D76237142366EE009479AC /* ShareController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareController.h; sourceTree = "<group>"; };
 		A6D76238142366EE009479AC /* ShareController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareController.m; sourceTree = "<group>"; };
-		A6D7623B142366EE009479AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
-		A6D7623E142366EE009479AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
-		A6D762451423693D009479AC /* MapController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MapController.h; sourceTree = "<group>"; };
+		A6D7623B142366EE009479AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ImageController.xib; sourceTree = "<group>"; };
+		A6D7623E142366EE009479AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ShareController.xib; sourceTree = "<group>"; };
+		A6D762451423693D009479AC /* MapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapController.h; sourceTree = "<group>"; };
 		A6D762461423693D009479AC /* MapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapController.m; sourceTree = "<group>"; };
-		A6D762471423693D009479AC /* ThirdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdView.xib; sourceTree = "<group>"; };
+		A6D762471423693D009479AC /* MapController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +98,9 @@
 				A6D76238142366EE009479AC /* ShareController.m */,
 				A6D762451423693D009479AC /* MapController.h */,
 				A6D762461423693D009479AC /* MapController.m */,
-				A6D7623A142366EE009479AC /* FirstView.xib */,
-				A6D7623D142366EE009479AC /* SecondView.xib */,
-				A6D762471423693D009479AC /* ThirdView.xib */,
+				A6D7623A142366EE009479AC /* ImageController.xib */,
+				A6D7623D142366EE009479AC /* ShareController.xib */,
+				A6D762471423693D009479AC /* MapController.xib */,
 				A6D76226142366EE009479AC /* Supporting Files */,
 			);
 			path = Assignment;
@@ -166,9 +166,9 @@
 			files = (
 				A6D7622A142366EE009479AC /* InfoPlist.strings in Resources */,
 				A6D76233142366EE009479AC /* MainWindow.xib in Resources */,
-				A6D7623C142366EE009479AC /* FirstView.xib in Resources */,
-				A6D7623F142366EE009479AC /* SecondView.xib in Resources */,
-				A6D762491423693D009479AC /* ThirdView.xib in Resources */,
+				A6D7623C142366EE009479AC /* ImageController.xib in Resources */,
+				A6D7623F142366EE009479AC /* ShareController.xib in Resources */,
+				A6D762491423693D009479AC /* MapController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,20 +206,20 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		A6D7623A142366EE009479AC /* FirstView.xib */ = {
+		A6D7623A142366EE009479AC /* ImageController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A6D7623B142366EE009479AC /* en */,
 			);
-			name = FirstView.xib;
+			name = ImageController.xib;
 			sourceTree = "<group>";
 		};
-		A6D7623D142366EE009479AC /* SecondView.xib */ = {
+		A6D7623D142366EE009479AC /* ShareController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A6D7623E142366EE009479AC /* en */,
 			);
-			name = SecondView.xib;
+			name = ShareController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
