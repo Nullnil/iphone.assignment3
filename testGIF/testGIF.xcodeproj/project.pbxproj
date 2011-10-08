@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		016069501440887600801FDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0160694F1440887600801FDA /* UIKit.framework */; };
+		016069521440887600801FDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016069511440887600801FDA /* Foundation.framework */; };
+		016069541440887600801FDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016069531440887600801FDA /* CoreGraphics.framework */; };
+		016069561440887600801FDA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016069551440887600801FDA /* CoreData.framework */; };
+		0160695C1440887600801FDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0160695A1440887600801FDA /* InfoPlist.strings */; };
+		0160695E1440887600801FDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0160695D1440887600801FDA /* main.m */; };
+		016069621440887600801FDA /* testGIFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 016069611440887600801FDA /* testGIFAppDelegate.m */; };
+		016069651440887600801FDA /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016069631440887600801FDA /* MainWindow.xib */; };
+		016069681440887700801FDA /* testGIF.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 016069661440887700801FDA /* testGIF.xcdatamodeld */; };
+		016069711440893B00801FDA /* BitBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 016069701440893B00801FDA /* BitBuffer.m */; };
+		0160697E1440895A00801FDA /* ANBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 016069731440895A00801FDA /* ANBlock.m */; };
+		0160697F1440895A00801FDA /* ANGifBitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 016069751440895A00801FDA /* ANGifBitmap.m */; };
+		016069801440895A00801FDA /* ANGifEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 016069771440895A00801FDA /* ANGifEncoder.m */; };
+		016069811440895A00801FDA /* ANGifPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 016069791440895A00801FDA /* ANGifPalette.m */; };
+		016069821440895A00801FDA /* ANImageBitmapRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 0160697B1440895A00801FDA /* ANImageBitmapRep.m */; };
+		016069831440895A00801FDA /* ANPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0160697D1440895A00801FDA /* ANPoint.m */; };
+		016069881440898A00801FDA /* GiraffeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 016069851440898A00801FDA /* GiraffeAppDelegate.m */; };
+		016069891440898A00801FDA /* GiraffeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016069871440898A00801FDA /* GiraffeViewController.m */; };
+		0160698F14408ABD00801FDA /* VideoTakingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0160698E14408ABD00801FDA /* VideoTakingController.m */; };
+		0160699314408CDE00801FDA /* VideoTakingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0160699214408CDE00801FDA /* VideoTakingController.xib */; };
+		01606995144090F900801FDA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01606994144090F900801FDA /* CoreMedia.framework */; };
+		016069971440912300801FDA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016069961440912300801FDA /* AVFoundation.framework */; };
+		0160699B1440A0C600801FDA /* GenerateGIFController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016069991440A0C000801FDA /* GenerateGIFController.m */; };
+		0160699C1440A0C600801FDA /* GenerateGIFController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0160699A1440A0C100801FDA /* GenerateGIFController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0160694B1440887600801FDA /* testGIF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testGIF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0160694F1440887600801FDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		016069511440887600801FDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		016069531440887600801FDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		016069551440887600801FDA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		016069591440887600801FDA /* testGIF-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testGIF-Info.plist"; sourceTree = "<group>"; };
+		0160695B1440887600801FDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0160695D1440887600801FDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0160695F1440887600801FDA /* testGIF-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testGIF-Prefix.pch"; sourceTree = "<group>"; };
+		016069601440887600801FDA /* testGIFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testGIFAppDelegate.h; sourceTree = "<group>"; };
+		016069611440887600801FDA /* testGIFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testGIFAppDelegate.m; sourceTree = "<group>"; };
+		016069641440887600801FDA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		016069671440887700801FDA /* testGIF.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = testGIF.xcdatamodel; sourceTree = "<group>"; };
+		0160696F1440892D00801FDA /* BitBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitBuffer.h; sourceTree = "<group>"; };
+		016069701440893B00801FDA /* BitBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitBuffer.m; sourceTree = "<group>"; };
+		016069721440895A00801FDA /* ANBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBlock.h; sourceTree = "<group>"; };
+		016069731440895A00801FDA /* ANBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBlock.m; sourceTree = "<group>"; };
+		016069741440895A00801FDA /* ANGifBitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifBitmap.h; sourceTree = "<group>"; };
+		016069751440895A00801FDA /* ANGifBitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGifBitmap.m; sourceTree = "<group>"; };
+		016069761440895A00801FDA /* ANGifEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifEncoder.h; sourceTree = "<group>"; };
+		016069771440895A00801FDA /* ANGifEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGifEncoder.m; sourceTree = "<group>"; };
+		016069781440895A00801FDA /* ANGifPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifPalette.h; sourceTree = "<group>"; };
+		016069791440895A00801FDA /* ANGifPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGifPalette.m; sourceTree = "<group>"; };
+		0160697A1440895A00801FDA /* ANImageBitmapRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANImageBitmapRep.h; sourceTree = "<group>"; };
+		0160697B1440895A00801FDA /* ANImageBitmapRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANImageBitmapRep.m; sourceTree = "<group>"; };
+		0160697C1440895A00801FDA /* ANPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPoint.h; sourceTree = "<group>"; };
+		0160697D1440895A00801FDA /* ANPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPoint.m; sourceTree = "<group>"; };
+		016069841440898A00801FDA /* GiraffeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiraffeAppDelegate.h; sourceTree = "<group>"; };
+		016069851440898A00801FDA /* GiraffeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiraffeAppDelegate.m; sourceTree = "<group>"; };
+		016069861440898A00801FDA /* GiraffeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiraffeViewController.h; sourceTree = "<group>"; };
+		016069871440898A00801FDA /* GiraffeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiraffeViewController.m; sourceTree = "<group>"; };
+		0160698D14408ABC00801FDA /* VideoTakingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTakingController.h; sourceTree = "<group>"; };
+		0160698E14408ABD00801FDA /* VideoTakingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTakingController.m; sourceTree = "<group>"; };
+		0160699214408CDE00801FDA /* VideoTakingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoTakingController.xib; sourceTree = "<group>"; };
+		01606994144090F900801FDA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		016069961440912300801FDA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		016069981440A0C000801FDA /* GenerateGIFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateGIFController.h; sourceTree = "<group>"; };
+		016069991440A0C000801FDA /* GenerateGIFController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateGIFController.m; sourceTree = "<group>"; };
+		0160699A1440A0C100801FDA /* GenerateGIFController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenerateGIFController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		016069481440887600801FDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016069971440912300801FDA /* AVFoundation.framework in Frameworks */,
+				01606995144090F900801FDA /* CoreMedia.framework in Frameworks */,
+				016069501440887600801FDA /* UIKit.framework in Frameworks */,
+				016069521440887600801FDA /* Foundation.framework in Frameworks */,
+				016069541440887600801FDA /* CoreGraphics.framework in Frameworks */,
+				016069561440887600801FDA /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		016069401440887600801FDA = {
+			isa = PBXGroup;
+			children = (
+				016069571440887600801FDA /* testGIF */,
+				0160694E1440887600801FDA /* Frameworks */,
+				0160694C1440887600801FDA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0160694C1440887600801FDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0160694B1440887600801FDA /* testGIF.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0160694E1440887600801FDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				016069961440912300801FDA /* AVFoundation.framework */,
+				01606994144090F900801FDA /* CoreMedia.framework */,
+				0160694F1440887600801FDA /* UIKit.framework */,
+				016069511440887600801FDA /* Foundation.framework */,
+				016069531440887600801FDA /* CoreGraphics.framework */,
+				016069551440887600801FDA /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		016069571440887600801FDA /* testGIF */ = {
+			isa = PBXGroup;
+			children = (
+				0160696E144088FC00801FDA /* GIF */,
+				016069601440887600801FDA /* testGIFAppDelegate.h */,
+				016069611440887600801FDA /* testGIFAppDelegate.m */,
+				016069631440887600801FDA /* MainWindow.xib */,
+				016069661440887700801FDA /* testGIF.xcdatamodeld */,
+				016069581440887600801FDA /* Supporting Files */,
+			);
+			path = testGIF;
+			sourceTree = "<group>";
+		};
+		016069581440887600801FDA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				016069591440887600801FDA /* testGIF-Info.plist */,
+				0160695A1440887600801FDA /* InfoPlist.strings */,
+				0160695D1440887600801FDA /* main.m */,
+				0160695F1440887600801FDA /* testGIF-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0160696E144088FC00801FDA /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				0160699214408CDE00801FDA /* VideoTakingController.xib */,
+				0160698D14408ABC00801FDA /* VideoTakingController.h */,
+				0160698E14408ABD00801FDA /* VideoTakingController.m */,
+				016069841440898A00801FDA /* GiraffeAppDelegate.h */,
+				016069981440A0C000801FDA /* GenerateGIFController.h */,
+				016069991440A0C000801FDA /* GenerateGIFController.m */,
+				0160699A1440A0C100801FDA /* GenerateGIFController.xib */,
+				016069851440898A00801FDA /* GiraffeAppDelegate.m */,
+				016069861440898A00801FDA /* GiraffeViewController.h */,
+				016069871440898A00801FDA /* GiraffeViewController.m */,
+				016069721440895A00801FDA /* ANBlock.h */,
+				016069731440895A00801FDA /* ANBlock.m */,
+				016069741440895A00801FDA /* ANGifBitmap.h */,
+				016069751440895A00801FDA /* ANGifBitmap.m */,
+				016069761440895A00801FDA /* ANGifEncoder.h */,
+				016069771440895A00801FDA /* ANGifEncoder.m */,
+				016069781440895A00801FDA /* ANGifPalette.h */,
+				016069791440895A00801FDA /* ANGifPalette.m */,
+				0160697A1440895A00801FDA /* ANImageBitmapRep.h */,
+				0160697B1440895A00801FDA /* ANImageBitmapRep.m */,
+				0160697C1440895A00801FDA /* ANPoint.h */,
+				0160697D1440895A00801FDA /* ANPoint.m */,
+				016069701440893B00801FDA /* BitBuffer.m */,
+				0160696F1440892D00801FDA /* BitBuffer.h */,
+			);
+			name = GIF;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0160694A1440887600801FDA /* testGIF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0160696B1440887700801FDA /* Build configuration list for PBXNativeTarget "testGIF" */;
+			buildPhases = (
+				016069471440887600801FDA /* Sources */,
+				016069481440887600801FDA /* Frameworks */,
+				016069491440887600801FDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testGIF;
+			productName = testGIF;
+			productReference = 0160694B1440887600801FDA /* testGIF.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		016069421440887600801FDA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 016069451440887600801FDA /* Build configuration list for PBXProject "testGIF" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 016069401440887600801FDA;
+			productRefGroup = 0160694C1440887600801FDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0160694A1440887600801FDA /* testGIF */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		016069491440887600801FDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0160695C1440887600801FDA /* InfoPlist.strings in Resources */,
+				016069651440887600801FDA /* MainWindow.xib in Resources */,
+				0160699314408CDE00801FDA /* VideoTakingController.xib in Resources */,
+				0160699C1440A0C600801FDA /* GenerateGIFController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		016069471440887600801FDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0160695E1440887600801FDA /* main.m in Sources */,
+				016069621440887600801FDA /* testGIFAppDelegate.m in Sources */,
+				016069681440887700801FDA /* testGIF.xcdatamodeld in Sources */,
+				016069711440893B00801FDA /* BitBuffer.m in Sources */,
+				0160697E1440895A00801FDA /* ANBlock.m in Sources */,
+				0160697F1440895A00801FDA /* ANGifBitmap.m in Sources */,
+				016069801440895A00801FDA /* ANGifEncoder.m in Sources */,
+				016069811440895A00801FDA /* ANGifPalette.m in Sources */,
+				016069821440895A00801FDA /* ANImageBitmapRep.m in Sources */,
+				016069831440895A00801FDA /* ANPoint.m in Sources */,
+				016069881440898A00801FDA /* GiraffeAppDelegate.m in Sources */,
+				016069891440898A00801FDA /* GiraffeViewController.m in Sources */,
+				0160698F14408ABD00801FDA /* VideoTakingController.m in Sources */,
+				0160699B1440A0C600801FDA /* GenerateGIFController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0160695A1440887600801FDA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0160695B1440887600801FDA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		016069631440887600801FDA /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016069641440887600801FDA /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		016069691440887700801FDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0160696A1440887700801FDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0160696C1440887700801FDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testGIF/testGIF-Prefix.pch";
+				INFOPLIST_FILE = "testGIF/testGIF-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0160696D1440887700801FDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testGIF/testGIF-Prefix.pch";
+				INFOPLIST_FILE = "testGIF/testGIF-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		016069451440887600801FDA /* Build configuration list for PBXProject "testGIF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016069691440887700801FDA /* Debug */,
+				0160696A1440887700801FDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0160696B1440887700801FDA /* Build configuration list for PBXNativeTarget "testGIF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0160696C1440887700801FDA /* Debug */,
+				0160696D1440887700801FDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		016069661440887700801FDA /* testGIF.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				016069671440887700801FDA /* testGIF.xcdatamodel */,
+			);
+			currentVersion = 016069671440887700801FDA /* testGIF.xcdatamodel */;
+			path = testGIF.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 016069421440887600801FDA /* Project object */;
+}
