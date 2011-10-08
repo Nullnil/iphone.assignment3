@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01148810143CC10B0002C81F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0114880F143CC10B0002C81F /* CoreMedia.framework */; };
+		0117D1F5143DE9CE001E8F21 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D1E2143DE9C5001E8F21 /* ASIAuthenticationDialog.m */; };
+		0117D1F6143DE9CE001E8F21 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D1E5143DE9C5001E8F21 /* ASIDataCompressor.m */; };
+		0117D1F7143DE9CE001E8F21 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D1E7143DE9C5001E8F21 /* ASIDataDecompressor.m */; };
+		0117D1F8143DE9CE001E8F21 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D1E9143DE9C6001E8F21 /* ASIDownloadCache.m */; };
+		0117D1F9143DE9CE001E8F21 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D1EB143DE9C6001E8F21 /* ASIFormDataRequest.m */; };
+		0117D1FA143DE9CE001E8F21 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D1ED143DE9C6001E8F21 /* ASIHTTPRequest.m */; };
+		0117D1FB143DE9CE001E8F21 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D1F1143DE9C8001E8F21 /* ASIInputStream.m */; };
+		0117D1FC143DE9CE001E8F21 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D1F3143DE9C8001E8F21 /* ASINetworkQueue.m */; };
+		0117D1FE143DEA1D001E8F21 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0117D1FD143DEA1D001E8F21 /* CFNetwork.framework */; };
+		0117D202143DEE4A001E8F21 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0117D201143DEE4A001E8F21 /* SystemConfiguration.framework */; };
+		0117D204143DEE58001E8F21 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0117D203143DEE58001E8F21 /* MobileCoreServices.framework */; };
+		0117D206143DEE76001E8F21 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0117D205143DEE76001E8F21 /* libz.dylib */; };
+		0117D209143DF0C9001E8F21 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D208143DF0C8001E8F21 /* Reachability.m */; };
+		0117D20B143E0A6E001E8F21 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0117D20A143E0A6D001E8F21 /* MessageUI.framework */; };
+		0117D21E143E0EAE001E8F21 /* ANBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D20D143E0EA6001E8F21 /* ANBlock.m */; };
+		0117D21F143E0EAE001E8F21 /* ANGifBitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D20F143E0EA7001E8F21 /* ANGifBitmap.m */; };
+		0117D220143E0EAE001E8F21 /* ANGifEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D211143E0EA8001E8F21 /* ANGifEncoder.m */; };
+		0117D221143E0EAE001E8F21 /* ANGifPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D213143E0EA9001E8F21 /* ANGifPalette.m */; };
+		0117D222143E0EAE001E8F21 /* ANImageBitmapRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D215143E0EAA001E8F21 /* ANImageBitmapRep.m */; };
+		0117D223143E0EAE001E8F21 /* ANPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D217143E0EAB001E8F21 /* ANPoint.m */; };
+		0117D224143E0EAE001E8F21 /* BitBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D219143E0EAC001E8F21 /* BitBuffer.m */; };
+		0117D225143E0EAE001E8F21 /* GiraffeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D21B143E0EAD001E8F21 /* GiraffeAppDelegate.m */; };
+		0117D226143E0EAE001E8F21 /* GiraffeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117D21D143E0EAE001E8F21 /* GiraffeViewController.m */; };
+		01487DF9143CC06D006C6219 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01487DF8143CC06D006C6219 /* AVFoundation.framework */; };
+		01F719051429EF0500254864 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F719041429EF0500254864 /* UIKit.framework */; };
+		01F719071429EF0500254864 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F719061429EF0500254864 /* Foundation.framework */; };
+		01F719091429EF0500254864 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F719081429EF0500254864 /* CoreGraphics.framework */; };
+		01F7190F1429EF0500254864 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01F7190D1429EF0500254864 /* InfoPlist.strings */; };
+		01F719111429EF0500254864 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F719101429EF0500254864 /* main.m */; };
+		01F719151429EF0500254864 /* testCameraAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F719141429EF0500254864 /* testCameraAppDelegate.m */; };
+		01F719181429EF0500254864 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F719161429EF0500254864 /* MainWindow.xib */; };
+		01F7191B1429EF0500254864 /* testCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F7191A1429EF0500254864 /* testCameraViewController.m */; };
+		01F7191E1429EF0600254864 /* testCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F7191C1429EF0600254864 /* testCameraViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0114880F143CC10B0002C81F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0117D1E1143DE9C4001E8F21 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		0117D1E2143DE9C5001E8F21 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		0117D1E3143DE9C5001E8F21 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		0117D1E4143DE9C5001E8F21 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		0117D1E5143DE9C5001E8F21 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		0117D1E6143DE9C5001E8F21 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		0117D1E7143DE9C5001E8F21 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		0117D1E8143DE9C6001E8F21 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		0117D1E9143DE9C6001E8F21 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		0117D1EA143DE9C6001E8F21 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		0117D1EB143DE9C6001E8F21 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		0117D1EC143DE9C6001E8F21 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		0117D1ED143DE9C6001E8F21 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		0117D1EE143DE9C6001E8F21 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		0117D1EF143DE9C6001E8F21 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		0117D1F0143DE9C8001E8F21 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		0117D1F1143DE9C8001E8F21 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		0117D1F2143DE9C8001E8F21 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		0117D1F3143DE9C8001E8F21 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		0117D1F4143DE9CD001E8F21 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		0117D1FD143DEA1D001E8F21 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0117D201143DEE4A001E8F21 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0117D203143DEE58001E8F21 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		0117D205143DEE76001E8F21 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		0117D207143DF0C8001E8F21 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0117D208143DF0C8001E8F21 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		0117D20A143E0A6D001E8F21 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		0117D20C143E0EA6001E8F21 /* ANBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBlock.h; sourceTree = "<group>"; };
+		0117D20D143E0EA6001E8F21 /* ANBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBlock.m; sourceTree = "<group>"; };
+		0117D20E143E0EA7001E8F21 /* ANGifBitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifBitmap.h; sourceTree = "<group>"; };
+		0117D20F143E0EA7001E8F21 /* ANGifBitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGifBitmap.m; sourceTree = "<group>"; };
+		0117D210143E0EA8001E8F21 /* ANGifEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifEncoder.h; sourceTree = "<group>"; };
+		0117D211143E0EA8001E8F21 /* ANGifEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGifEncoder.m; sourceTree = "<group>"; };
+		0117D212143E0EA9001E8F21 /* ANGifPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifPalette.h; sourceTree = "<group>"; };
+		0117D213143E0EA9001E8F21 /* ANGifPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGifPalette.m; sourceTree = "<group>"; };
+		0117D214143E0EAA001E8F21 /* ANImageBitmapRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANImageBitmapRep.h; sourceTree = "<group>"; };
+		0117D215143E0EAA001E8F21 /* ANImageBitmapRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANImageBitmapRep.m; sourceTree = "<group>"; };
+		0117D216143E0EAA001E8F21 /* ANPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPoint.h; sourceTree = "<group>"; };
+		0117D217143E0EAB001E8F21 /* ANPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPoint.m; sourceTree = "<group>"; };
+		0117D218143E0EAC001E8F21 /* BitBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitBuffer.h; sourceTree = "<group>"; };
+		0117D219143E0EAC001E8F21 /* BitBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitBuffer.m; sourceTree = "<group>"; };
+		0117D21A143E0EAC001E8F21 /* GiraffeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiraffeAppDelegate.h; sourceTree = "<group>"; };
+		0117D21B143E0EAD001E8F21 /* GiraffeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiraffeAppDelegate.m; sourceTree = "<group>"; };
+		0117D21C143E0EAD001E8F21 /* GiraffeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiraffeViewController.h; sourceTree = "<group>"; };
+		0117D21D143E0EAE001E8F21 /* GiraffeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiraffeViewController.m; sourceTree = "<group>"; };
+		01487DF8143CC06D006C6219 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		01F719001429EF0500254864 /* testCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01F719041429EF0500254864 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		01F719061429EF0500254864 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		01F719081429EF0500254864 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		01F7190C1429EF0500254864 /* testCamera-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testCamera-Info.plist"; sourceTree = "<group>"; };
+		01F7190E1429EF0500254864 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		01F719101429EF0500254864 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		01F719121429EF0500254864 /* testCamera-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testCamera-Prefix.pch"; sourceTree = "<group>"; };
+		01F719131429EF0500254864 /* testCameraAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testCameraAppDelegate.h; sourceTree = "<group>"; };
+		01F719141429EF0500254864 /* testCameraAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testCameraAppDelegate.m; sourceTree = "<group>"; };
+		01F719171429EF0500254864 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		01F719191429EF0500254864 /* testCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testCameraViewController.h; sourceTree = "<group>"; };
+		01F7191A1429EF0500254864 /* testCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testCameraViewController.m; sourceTree = "<group>"; };
+		01F7191D1429EF0600254864 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/testCameraViewController.xib; sourceTree = "<group>"; };
+		01F719251429EF0600254864 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01F718FD1429EF0500254864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0117D20B143E0A6E001E8F21 /* MessageUI.framework in Frameworks */,
+				0117D206143DEE76001E8F21 /* libz.dylib in Frameworks */,
+				0117D204143DEE58001E8F21 /* MobileCoreServices.framework in Frameworks */,
+				0117D202143DEE4A001E8F21 /* SystemConfiguration.framework in Frameworks */,
+				0117D1FE143DEA1D001E8F21 /* CFNetwork.framework in Frameworks */,
+				01148810143CC10B0002C81F /* CoreMedia.framework in Frameworks */,
+				01487DF9143CC06D006C6219 /* AVFoundation.framework in Frameworks */,
+				01F719051429EF0500254864 /* UIKit.framework in Frameworks */,
+				01F719071429EF0500254864 /* Foundation.framework in Frameworks */,
+				01F719091429EF0500254864 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01F718F51429EF0400254864 = {
+			isa = PBXGroup;
+			children = (
+				01F7190A1429EF0500254864 /* testCamera */,
+				01F719031429EF0500254864 /* Frameworks */,
+				01F719011429EF0500254864 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01F719011429EF0500254864 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01F719001429EF0500254864 /* testCamera.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01F719031429EF0500254864 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0117D20A143E0A6D001E8F21 /* MessageUI.framework */,
+				0117D205143DEE76001E8F21 /* libz.dylib */,
+				0117D203143DEE58001E8F21 /* MobileCoreServices.framework */,
+				0117D201143DEE4A001E8F21 /* SystemConfiguration.framework */,
+				0117D1FD143DEA1D001E8F21 /* CFNetwork.framework */,
+				0114880F143CC10B0002C81F /* CoreMedia.framework */,
+				01487DF8143CC06D006C6219 /* AVFoundation.framework */,
+				01F719041429EF0500254864 /* UIKit.framework */,
+				01F719061429EF0500254864 /* Foundation.framework */,
+				01F719081429EF0500254864 /* CoreGraphics.framework */,
+				01F719251429EF0600254864 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01F7190A1429EF0500254864 /* testCamera */ = {
+			isa = PBXGroup;
+			children = (
+				0117D20C143E0EA6001E8F21 /* ANBlock.h */,
+				0117D20D143E0EA6001E8F21 /* ANBlock.m */,
+				0117D20E143E0EA7001E8F21 /* ANGifBitmap.h */,
+				0117D20F143E0EA7001E8F21 /* ANGifBitmap.m */,
+				0117D210143E0EA8001E8F21 /* ANGifEncoder.h */,
+				0117D211143E0EA8001E8F21 /* ANGifEncoder.m */,
+				0117D212143E0EA9001E8F21 /* ANGifPalette.h */,
+				0117D213143E0EA9001E8F21 /* ANGifPalette.m */,
+				0117D214143E0EAA001E8F21 /* ANImageBitmapRep.h */,
+				0117D215143E0EAA001E8F21 /* ANImageBitmapRep.m */,
+				0117D216143E0EAA001E8F21 /* ANPoint.h */,
+				0117D217143E0EAB001E8F21 /* ANPoint.m */,
+				0117D218143E0EAC001E8F21 /* BitBuffer.h */,
+				0117D219143E0EAC001E8F21 /* BitBuffer.m */,
+				0117D21A143E0EAC001E8F21 /* GiraffeAppDelegate.h */,
+				0117D21B143E0EAD001E8F21 /* GiraffeAppDelegate.m */,
+				0117D21C143E0EAD001E8F21 /* GiraffeViewController.h */,
+				0117D21D143E0EAE001E8F21 /* GiraffeViewController.m */,
+				0117D207143DF0C8001E8F21 /* Reachability.h */,
+				0117D208143DF0C8001E8F21 /* Reachability.m */,
+				0117D1E1143DE9C4001E8F21 /* ASIAuthenticationDialog.h */,
+				0117D1E2143DE9C5001E8F21 /* ASIAuthenticationDialog.m */,
+				0117D1E3143DE9C5001E8F21 /* ASICacheDelegate.h */,
+				0117D1E4143DE9C5001E8F21 /* ASIDataCompressor.h */,
+				0117D1E5143DE9C5001E8F21 /* ASIDataCompressor.m */,
+				0117D1E6143DE9C5001E8F21 /* ASIDataDecompressor.h */,
+				0117D1E7143DE9C5001E8F21 /* ASIDataDecompressor.m */,
+				0117D1E8143DE9C6001E8F21 /* ASIDownloadCache.h */,
+				0117D1E9143DE9C6001E8F21 /* ASIDownloadCache.m */,
+				0117D1EA143DE9C6001E8F21 /* ASIFormDataRequest.h */,
+				0117D1EB143DE9C6001E8F21 /* ASIFormDataRequest.m */,
+				0117D1EC143DE9C6001E8F21 /* ASIHTTPRequest.h */,
+				0117D1ED143DE9C6001E8F21 /* ASIHTTPRequest.m */,
+				0117D1EE143DE9C6001E8F21 /* ASIHTTPRequestConfig.h */,
+				0117D1EF143DE9C6001E8F21 /* ASIHTTPRequestDelegate.h */,
+				0117D1F0143DE9C8001E8F21 /* ASIInputStream.h */,
+				0117D1F1143DE9C8001E8F21 /* ASIInputStream.m */,
+				0117D1F2143DE9C8001E8F21 /* ASINetworkQueue.h */,
+				0117D1F3143DE9C8001E8F21 /* ASINetworkQueue.m */,
+				0117D1F4143DE9CD001E8F21 /* ASIProgressDelegate.h */,
+				01F719131429EF0500254864 /* testCameraAppDelegate.h */,
+				01F719141429EF0500254864 /* testCameraAppDelegate.m */,
+				01F719161429EF0500254864 /* MainWindow.xib */,
+				01F719191429EF0500254864 /* testCameraViewController.h */,
+				01F7191A1429EF0500254864 /* testCameraViewController.m */,
+				01F7191C1429EF0600254864 /* testCameraViewController.xib */,
+				01F7190B1429EF0500254864 /* Supporting Files */,
+			);
+			path = testCamera;
+			sourceTree = "<group>";
+		};
+		01F7190B1429EF0500254864 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01F7190C1429EF0500254864 /* testCamera-Info.plist */,
+				01F7190D1429EF0500254864 /* InfoPlist.strings */,
+				01F719101429EF0500254864 /* main.m */,
+				01F719121429EF0500254864 /* testCamera-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01F718FF1429EF0500254864 /* testCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01F719381429EF0600254864 /* Build configuration list for PBXNativeTarget "testCamera" */;
+			buildPhases = (
+				01F718FC1429EF0500254864 /* Sources */,
+				01F718FD1429EF0500254864 /* Frameworks */,
+				01F718FE1429EF0500254864 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testCamera;
+			productName = testCamera;
+			productReference = 01F719001429EF0500254864 /* testCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01F718F71429EF0400254864 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 01F718FA1429EF0400254864 /* Build configuration list for PBXProject "testCamera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 01F718F51429EF0400254864;
+			productRefGroup = 01F719011429EF0500254864 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01F718FF1429EF0500254864 /* testCamera */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01F718FE1429EF0500254864 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01F7190F1429EF0500254864 /* InfoPlist.strings in Resources */,
+				01F719181429EF0500254864 /* MainWindow.xib in Resources */,
+				01F7191E1429EF0600254864 /* testCameraViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01F718FC1429EF0500254864 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01F719111429EF0500254864 /* main.m in Sources */,
+				01F719151429EF0500254864 /* testCameraAppDelegate.m in Sources */,
+				01F7191B1429EF0500254864 /* testCameraViewController.m in Sources */,
+				0117D1F5143DE9CE001E8F21 /* ASIAuthenticationDialog.m in Sources */,
+				0117D1F6143DE9CE001E8F21 /* ASIDataCompressor.m in Sources */,
+				0117D1F7143DE9CE001E8F21 /* ASIDataDecompressor.m in Sources */,
+				0117D1F8143DE9CE001E8F21 /* ASIDownloadCache.m in Sources */,
+				0117D1F9143DE9CE001E8F21 /* ASIFormDataRequest.m in Sources */,
+				0117D1FA143DE9CE001E8F21 /* ASIHTTPRequest.m in Sources */,
+				0117D1FB143DE9CE001E8F21 /* ASIInputStream.m in Sources */,
+				0117D1FC143DE9CE001E8F21 /* ASINetworkQueue.m in Sources */,
+				0117D209143DF0C9001E8F21 /* Reachability.m in Sources */,
+				0117D21E143E0EAE001E8F21 /* ANBlock.m in Sources */,
+				0117D21F143E0EAE001E8F21 /* ANGifBitmap.m in Sources */,
+				0117D220143E0EAE001E8F21 /* ANGifEncoder.m in Sources */,
+				0117D221143E0EAE001E8F21 /* ANGifPalette.m in Sources */,
+				0117D222143E0EAE001E8F21 /* ANImageBitmapRep.m in Sources */,
+				0117D223143E0EAE001E8F21 /* ANPoint.m in Sources */,
+				0117D224143E0EAE001E8F21 /* BitBuffer.m in Sources */,
+				0117D225143E0EAE001E8F21 /* GiraffeAppDelegate.m in Sources */,
+				0117D226143E0EAE001E8F21 /* GiraffeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		01F7190D1429EF0500254864 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01F7190E1429EF0500254864 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		01F719161429EF0500254864 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01F719171429EF0500254864 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		01F7191C1429EF0600254864 /* testCameraViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01F7191D1429EF0600254864 /* en */,
+			);
+			name = testCameraViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01F719361429EF0600254864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		01F719371429EF0600254864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01F719391429EF0600254864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testCamera/testCamera-Prefix.pch";
+				INFOPLIST_FILE = "testCamera/testCamera-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		01F7193A1429EF0600254864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testCamera/testCamera-Prefix.pch";
+				INFOPLIST_FILE = "testCamera/testCamera-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01F718FA1429EF0400254864 /* Build configuration list for PBXProject "testCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01F719361429EF0600254864 /* Debug */,
+				01F719371429EF0600254864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01F719381429EF0600254864 /* Build configuration list for PBXNativeTarget "testCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01F719391429EF0600254864 /* Debug */,
+				01F7193A1429EF0600254864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01F718F71429EF0400254864 /* Project object */;
+}
