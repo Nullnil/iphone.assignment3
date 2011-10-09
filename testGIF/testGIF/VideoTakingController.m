@@ -28,6 +28,19 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @synthesize images;
 @synthesize filename;
 @synthesize imageforpalette;
+@synthesize HUD;
+@synthesize generategifbutton;
+@synthesize imageView;
+
+
+
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+    // Remove HUD from screen when the HUD was hidded
+    [HUD removeFromSuperview];
+    self.HUD = nil;
+    NSLog(@"hidden");
+}
+
 
 /* resize the UIImage */
 -(UIImage *)resizeUIImage:(UIImage *)image scaledToSize:(CGSize)newSize {
@@ -39,21 +52,27 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 }
 
 
--(void)performGenerateGIFController{
+
+
+-(void)displayFakeGIF{
     
-    GenerateGIFController *ggifc = [[GenerateGIFController alloc] initWithThumbnails:self.images
-                                                                     imageforpalette:self.imageforpalette ];
+    NSLog(@"%d", self.images.count);
     
-    [ self.navigationController pushViewController:ggifc animated:YES ];
+    imageView.animationImages = [NSArray arrayWithArray:self.images];
     
-    [ ggifc release ];
+    imageView.animationDuration = 1;
     
+    imageView.animationRepeatCount = 0;
+    
+    [imageView startAnimating];
 }
+
 
 
 /* get thumbnails from video */
 -(void)getThumbnails:(NSDictionary *)info{
     
+    sleep(1);
     NSURL *urlOfVideo = [ info objectForKey:UIImagePickerControllerMediaURL ];
     NSLog(@"Video URL = %@", urlOfVideo);
     
@@ -94,7 +113,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
                                                 
                                                 NSLog(@"Last time!c");  
                                                 self.imageforpalette = [self resizeUIImage:[UIImage imageWithCGImage:image] 
-                                                                              scaledToSize:CGSizeMake(50, 50)];
+                                                                              scaledToSize:CGSizeMake(120, 120)];
+                                                
+                        
+                                                [ self displayFakeGIF ];
                                                 
                                                 
                                             }
@@ -131,13 +153,23 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 }
 
 
+
 -(void)imagePickerController:(UIImagePickerController*) picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info{
     NSString *mediaType = [ info objectForKey:UIImagePickerControllerMediaType ];
     
     if([mediaType isEqualToString:(NSString *)@"public.movie"] == YES){
         
-        [ self getThumbnails:info ];        
+        /* call waiting screen */
+        HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:HUD];
+        
+        HUD.delegate = self;
+        HUD.labelText = @"Extracting thumbnails";
+    
+        [HUD showWhileExecuting:@selector(getThumbnails:) onTarget:self withObject:info animated:YES];
+        //[ self getThumbnails:info ];        
+        
         
         [[picker parentViewController] dismissModalViewControllerAnimated:YES];
         
@@ -222,87 +254,131 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     [super dealloc];
 }
 
-/*
-- (IBAction)uploadGIF:(id)sender {
-    
 
+/* generate a new gif name */
+-(NSString*)generateNewGifName{
+    char name[] = "XXXX";
+    mktemp(name);
+    NSString *gifname = [[ NSString alloc ] initWithFormat:@"%s.gif", name];
+    [ gifname autorelease ];
+    return gifname;
+}
+
+
+/* perform UploadGIFController */
+-(void)performUploadGIFController:(NSString*)name{
     
+    uploadGIFController * upgif = [[uploadGIFController alloc] initWithFileName: name ];
+    //uploadGIFController *upgif = [[uploadGIFController alloc]init];
     
-    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:
-                                   [NSURL URLWithString:@"https://www.tumblr.com/api/write"]];
+    if( upgif ){
+      [self.navigationController pushViewController:upgif animated:YES];
+      [upgif release];
+    }
+}
+
+
+
+-(BOOL)generateGIFfrompics{
     
+    NSString * fileName = [NSString stringWithFormat:@"%@/Documents/%@", 
+                           NSHomeDirectory(),[self generateNewGifName ]];
+    self.filename = fileName;
+    NSLog(@"%@", fileName);
+    
+    ANPoint *mattePoint = [[ANPoint alloc] initWithR:255 withG:255 withB:255];
+    
+    ANGifPalette *palette = [[ANGifPalette alloc] initWithImage: self.imageforpalette.CGImage 
+                                                      withMatte:mattePoint];
+    
+    ANGifEncoder * enc = [[ANGifEncoder alloc] initWithFile:fileName 
+                                           withColorPalette:palette 
+                                                   animated:YES];
+    UIImage* im = [ self.images lastObject ];
+    ANGifBitmap *bmp = [[ANGifBitmap alloc] initWithImage: im withColorPalette:palette];
+    /* get CGSize of file */
+    
+    [ enc beginFile:bmp.size delayTime:1];
+    
+    /* change mode of waiting screen */
+    HUD.mode = MBProgressHUDModeDeterminate;
+    HUD.labelText = @"Generating GIF";
+    HUD.detailsLabelText = nil;
+    float progress = 0.0f;
+    int i = 1;
+    
+    NSLog(@"%d", self.images.count);
+    for( UIImage* im in self.images ){
+        
+        /* increment progress */
+        progress += ((float)i)/(self.images.count+10);
+        NSLog(@"%f\n", progress);
+        self.HUD.progress = progress;
+        
+        NSLog(@"%d", i);
+        i += 1;
+        
+        ANGifBitmap * bmp = [[ANGifBitmap alloc] initWithImage: im withColorPalette:palette];
+        [ enc addImage:bmp ]; 
+        [ bmp release ];
    
+    }
+    [ im release ];
+    [ bmp release ];
     
-    [request setPostValue:@"janusle@gmail.com" forKey:@"email"];
-    [request setPostValue:@"YUYANGMM" forKey:@"password"];
-    [request setPostValue:@"photo" forKey:@"type"];
-    [request setPostValue:@"test" forKey:@"title"];
-    [request setPostValue:@"It's a test" forKey:@"body"]; 
-    [request setFile:self.filename withFileName:@"test.gif" andContentType:@"image/gif"
-              forKey:@"data"];
-    [request startSynchronous];
-      
-     NSError *error = [request error];
-    if (!error) {
-        int statusCode = [request responseStatusCode];
-        NSLog(@"%d", statusCode );
-        NSLog(@"Upload successfully");
+    [enc endFile];
+    
+    
+    
+    NSLog(@"GIF done");
+    NSFileManager *fileManager = [[ NSFileManager alloc] init];
+    NSDictionary * attributes = [ fileManager attributesOfItemAtPath:fileName error: nil ];
+    NSLog(@"%d", [[attributes objectForKey:NSFileSize] intValue]);
+    
+    [ fileName release ];
+    [ enc release ];
+    
+    /* increment progress */
+    progress = 1;
+    self.HUD.progress = progress;
+    
+    
+    /* display complete screen */
+    HUD.customView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Checkmark.png"]] autorelease];
+    HUD.detailsLabelText = nil;
+	HUD.mode = MBProgressHUDModeCustomView;
+	HUD.labelText = @"Completed";
+    sleep(2);
+    
+    [self performUploadGIFController:self.filename];
+    
+    
+}
+
+
+/* generate a gif from a series of thumbnails */
+- (IBAction)generateGIF:(id)sender {
+    
+    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    HUD.delegate = self;
+    if( self.images.count != 0 ){
+        
+        /* display waiting screen and generate GIF */
+       
+        [self.navigationController.view addSubview:HUD];
+        
+        
+        HUD.labelText = @"Preparing";
+        //HUD.detailsLabelText = @"It will take about 5 seconds";
+        [HUD showWhileExecuting:@selector(generateGIFfrompics) onTarget:self withObject:nil animated:YES];             
     }
     else{
-        int statusCode = [request responseStatusCode];
-        NSLog(@"%d", statusCode);
-        NSLog(@"%@", [request responseStatusMessage]);
-        NSString *contentType = [[request responseHeaders] objectForKey:@"Content-Type"];
-        NSLog(@"%@", contentType);
-        NSLog(@"%@",[ error localizedDescription]);
-        NSLog(@"%@",[ error localizedFailureReason]);
-        
+        HUD.labelText = @"Fail to generate GIF";
+        [HUD show:YES];
+        [HUD hide:YES afterDelay:1];
     }
-
-    [request release];
-    
-    
-    /*
-    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
-    picker.mailComposeDelegate = self;
-    [picker setSubject:@"Picture from my iPhone!"];
- 
-    
-    NSString *emailBody = @"I just took this picture, check it out.";
-    
-    [picker setMessageBody:emailBody isHTML:YES];
-    
-
-    NSData *image = [[NSData alloc] initWithContentsOfFile:self.filename]; 
-    
-
-    [picker addAttachmentData:image mimeType:@"image/gif" fileName:@"CameraImage"];
-    
- 
-    [self presentModalViewController:picker animated:YES];
- 
-    [picker release];
-    
     
 }
-*/
-
-/*
-- (IBAction)getPhoto:(id)sender {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init ];
-    picker.delegate = self;
-    picker.allowsEditing = NO;
-    picker.mediaTypes = [[NSArray alloc] initWithObjects: @"public.movie" , nil];
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    
-    [ self presentModalViewController:picker
-                             animated:YES ];
-    
-    [picker release ];
-    
-}
-*/
-
 
 
 

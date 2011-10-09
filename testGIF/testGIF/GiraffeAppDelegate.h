@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @class GiraffeViewController;
 
 @interface GiraffeAppDelegate : NSObject <UIApplicationDelegate> {
