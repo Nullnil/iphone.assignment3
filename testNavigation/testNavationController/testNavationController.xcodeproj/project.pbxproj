@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		016068FD14406E9300801FDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016068FC14406E9300801FDA /* UIKit.framework */; };
+		016068FF14406E9300801FDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016068FE14406E9300801FDA /* Foundation.framework */; };
+		0160690114406E9300801FDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0160690014406E9300801FDA /* CoreGraphics.framework */; };
+		0160690314406E9300801FDA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0160690214406E9300801FDA /* CoreData.framework */; };
+		0160690914406E9300801FDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0160690714406E9300801FDA /* InfoPlist.strings */; };
+		0160690B14406E9300801FDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0160690A14406E9300801FDA /* main.m */; };
+		0160690F14406E9300801FDA /* testNavationControllerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0160690E14406E9300801FDA /* testNavationControllerAppDelegate.m */; };
+		0160691214406E9300801FDA /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0160691014406E9300801FDA /* MainWindow.xib */; };
+		0160691514406E9300801FDA /* testNavationController.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0160691314406E9300801FDA /* testNavationController.xcdatamodeld */; };
+		0160691D14406E9400801FDA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0160691C14406E9400801FDA /* SenTestingKit.framework */; };
+		0160691E14406E9400801FDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016068FC14406E9300801FDA /* UIKit.framework */; };
+		0160691F14406E9400801FDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016068FE14406E9300801FDA /* Foundation.framework */; };
+		0160692014406E9400801FDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0160690014406E9300801FDA /* CoreGraphics.framework */; };
+		0160692114406E9400801FDA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0160690214406E9300801FDA /* CoreData.framework */; };
+		0160692914406E9400801FDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0160692714406E9400801FDA /* InfoPlist.strings */; };
+		0160692B14406E9400801FDA /* testNavationControllerTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 0160692A14406E9400801FDA /* testNavationControllerTests.h */; };
+		0160692D14406E9400801FDA /* testNavationControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0160692C14406E9400801FDA /* testNavationControllerTests.m */; };
+		016069391440738E00801FDA /* test1.m in Sources */ = {isa = PBXBuildFile; fileRef = 016069371440738E00801FDA /* test1.m */; };
+		0160693A1440738E00801FDA /* test1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016069381440738E00801FDA /* test1.xib */; };
+		0160693E144073B700801FDA /* test2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0160693C144073B700801FDA /* test2.m */; };
+		0160693F144073B700801FDA /* test2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0160693D144073B700801FDA /* test2.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0160692214406E9400801FDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 016068EF14406E9300801FDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 016068F714406E9300801FDA;
+			remoteInfo = testNavationController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		016068F814406E9300801FDA /* testNavationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testNavationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		016068FC14406E9300801FDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		016068FE14406E9300801FDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0160690014406E9300801FDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0160690214406E9300801FDA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0160690614406E9300801FDA /* testNavationController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testNavationController-Info.plist"; sourceTree = "<group>"; };
+		0160690814406E9300801FDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0160690A14406E9300801FDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0160690C14406E9300801FDA /* testNavationController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testNavationController-Prefix.pch"; sourceTree = "<group>"; };
+		0160690D14406E9300801FDA /* testNavationControllerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testNavationControllerAppDelegate.h; sourceTree = "<group>"; };
+		0160690E14406E9300801FDA /* testNavationControllerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testNavationControllerAppDelegate.m; sourceTree = "<group>"; };
+		0160691114406E9300801FDA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		0160691414406E9300801FDA /* testNavationController.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = testNavationController.xcdatamodel; sourceTree = "<group>"; };
+		0160691B14406E9400801FDA /* testNavationControllerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testNavationControllerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0160691C14406E9400801FDA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		0160692614406E9400801FDA /* testNavationControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testNavationControllerTests-Info.plist"; sourceTree = "<group>"; };
+		0160692814406E9400801FDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0160692A14406E9400801FDA /* testNavationControllerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testNavationControllerTests.h; sourceTree = "<group>"; };
+		0160692C14406E9400801FDA /* testNavationControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testNavationControllerTests.m; sourceTree = "<group>"; };
+		016069361440738E00801FDA /* test1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test1.h; sourceTree = "<group>"; };
+		016069371440738E00801FDA /* test1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test1.m; sourceTree = "<group>"; };
+		016069381440738E00801FDA /* test1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = test1.xib; sourceTree = "<group>"; };
+		0160693B144073B700801FDA /* test2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test2.h; sourceTree = "<group>"; };
+		0160693C144073B700801FDA /* test2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test2.m; sourceTree = "<group>"; };
+		0160693D144073B700801FDA /* test2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = test2.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		016068F514406E9300801FDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016068FD14406E9300801FDA /* UIKit.framework in Frameworks */,
+				016068FF14406E9300801FDA /* Foundation.framework in Frameworks */,
+				0160690114406E9300801FDA /* CoreGraphics.framework in Frameworks */,
+				0160690314406E9300801FDA /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0160691714406E9400801FDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0160691D14406E9400801FDA /* SenTestingKit.framework in Frameworks */,
+				0160691E14406E9400801FDA /* UIKit.framework in Frameworks */,
+				0160691F14406E9400801FDA /* Foundation.framework in Frameworks */,
+				0160692014406E9400801FDA /* CoreGraphics.framework in Frameworks */,
+				0160692114406E9400801FDA /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		016068ED14406E9300801FDA = {
+			isa = PBXGroup;
+			children = (
+				0160690414406E9300801FDA /* testNavationController */,
+				0160692414406E9400801FDA /* testNavationControllerTests */,
+				016068FB14406E9300801FDA /* Frameworks */,
+				016068F914406E9300801FDA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		016068F914406E9300801FDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				016068F814406E9300801FDA /* testNavationController.app */,
+				0160691B14406E9400801FDA /* testNavationControllerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		016068FB14406E9300801FDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				016068FC14406E9300801FDA /* UIKit.framework */,
+				016068FE14406E9300801FDA /* Foundation.framework */,
+				0160690014406E9300801FDA /* CoreGraphics.framework */,
+				0160690214406E9300801FDA /* CoreData.framework */,
+				0160691C14406E9400801FDA /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0160690414406E9300801FDA /* testNavationController */ = {
+			isa = PBXGroup;
+			children = (
+				0160690D14406E9300801FDA /* testNavationControllerAppDelegate.h */,
+				0160690E14406E9300801FDA /* testNavationControllerAppDelegate.m */,
+				016069361440738E00801FDA /* test1.h */,
+				016069371440738E00801FDA /* test1.m */,
+				016069381440738E00801FDA /* test1.xib */,
+				0160693B144073B700801FDA /* test2.h */,
+				0160693C144073B700801FDA /* test2.m */,
+				0160693D144073B700801FDA /* test2.xib */,
+				0160691014406E9300801FDA /* MainWindow.xib */,
+				0160691314406E9300801FDA /* testNavationController.xcdatamodeld */,
+				0160690514406E9300801FDA /* Supporting Files */,
+			);
+			path = testNavationController;
+			sourceTree = "<group>";
+		};
+		0160690514406E9300801FDA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0160690614406E9300801FDA /* testNavationController-Info.plist */,
+				0160690714406E9300801FDA /* InfoPlist.strings */,
+				0160690A14406E9300801FDA /* main.m */,
+				0160690C14406E9300801FDA /* testNavationController-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0160692414406E9400801FDA /* testNavationControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0160692A14406E9400801FDA /* testNavationControllerTests.h */,
+				0160692C14406E9400801FDA /* testNavationControllerTests.m */,
+				0160692514406E9400801FDA /* Supporting Files */,
+			);
+			path = testNavationControllerTests;
+			sourceTree = "<group>";
+		};
+		0160692514406E9400801FDA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0160692614406E9400801FDA /* testNavationControllerTests-Info.plist */,
+				0160692714406E9400801FDA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		016068F714406E9300801FDA /* testNavationController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0160693014406E9400801FDA /* Build configuration list for PBXNativeTarget "testNavationController" */;
+			buildPhases = (
+				016068F414406E9300801FDA /* Sources */,
+				016068F514406E9300801FDA /* Frameworks */,
+				016068F614406E9300801FDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testNavationController;
+			productName = testNavationController;
+			productReference = 016068F814406E9300801FDA /* testNavationController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0160691A14406E9400801FDA /* testNavationControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0160693314406E9400801FDA /* Build configuration list for PBXNativeTarget "testNavationControllerTests" */;
+			buildPhases = (
+				0160691614406E9400801FDA /* Sources */,
+				0160691714406E9400801FDA /* Frameworks */,
+				0160691814406E9400801FDA /* Resources */,
+				0160691914406E9400801FDA /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0160692314406E9400801FDA /* PBXTargetDependency */,
+			);
+			name = testNavationControllerTests;
+			productName = testNavationControllerTests;
+			productReference = 0160691B14406E9400801FDA /* testNavationControllerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		016068EF14406E9300801FDA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 016068F214406E9300801FDA /* Build configuration list for PBXProject "testNavationController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 016068ED14406E9300801FDA;
+			productRefGroup = 016068F914406E9300801FDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				016068F714406E9300801FDA /* testNavationController */,
+				0160691A14406E9400801FDA /* testNavationControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		016068F614406E9300801FDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0160690914406E9300801FDA /* InfoPlist.strings in Resources */,
+				0160691214406E9300801FDA /* MainWindow.xib in Resources */,
+				0160693A1440738E00801FDA /* test1.xib in Resources */,
+				0160693F144073B700801FDA /* test2.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0160691814406E9400801FDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0160692914406E9400801FDA /* InfoPlist.strings in Resources */,
+				0160692B14406E9400801FDA /* testNavationControllerTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0160691914406E9400801FDA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		016068F414406E9300801FDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0160690B14406E9300801FDA /* main.m in Sources */,
+				0160690F14406E9300801FDA /* testNavationControllerAppDelegate.m in Sources */,
+				0160691514406E9300801FDA /* testNavationController.xcdatamodeld in Sources */,
+				016069391440738E00801FDA /* test1.m in Sources */,
+				0160693E144073B700801FDA /* test2.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0160691614406E9400801FDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0160692D14406E9400801FDA /* testNavationControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0160692314406E9400801FDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 016068F714406E9300801FDA /* testNavationController */;
+			targetProxy = 0160692214406E9400801FDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0160690714406E9300801FDA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0160690814406E9300801FDA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0160691014406E9300801FDA /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0160691114406E9300801FDA /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		0160692714406E9400801FDA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0160692814406E9400801FDA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0160692E14406E9400801FDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0160692F14406E9400801FDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0160693114406E9400801FDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testNavationController/testNavationController-Prefix.pch";
+				INFOPLIST_FILE = "testNavationController/testNavationController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0160693214406E9400801FDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testNavationController/testNavationController-Prefix.pch";
+				INFOPLIST_FILE = "testNavationController/testNavationController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0160693414406E9400801FDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/testNavationController.app/testNavationController";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testNavationController/testNavationController-Prefix.pch";
+				INFOPLIST_FILE = "testNavationControllerTests/testNavationControllerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0160693514406E9400801FDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/testNavationController.app/testNavationController";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "testNavationController/testNavationController-Prefix.pch";
+				INFOPLIST_FILE = "testNavationControllerTests/testNavationControllerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		016068F214406E9300801FDA /* Build configuration list for PBXProject "testNavationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0160692E14406E9400801FDA /* Debug */,
+				0160692F14406E9400801FDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0160693014406E9400801FDA /* Build configuration list for PBXNativeTarget "testNavationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0160693114406E9400801FDA /* Debug */,
+				0160693214406E9400801FDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0160693314406E9400801FDA /* Build configuration list for PBXNativeTarget "testNavationControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0160693414406E9400801FDA /* Debug */,
+				0160693514406E9400801FDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0160691314406E9300801FDA /* testNavationController.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0160691414406E9300801FDA /* testNavationController.xcdatamodel */,
+			);
+			currentVersion = 0160691414406E9300801FDA /* testNavationController.xcdatamodel */;
+			path = testNavationController.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 016068EF14406E9300801FDA /* Project object */;
+}
