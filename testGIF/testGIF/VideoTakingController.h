@@ -27,12 +27,14 @@
     NSMutableArray *times;
     NSMutableArray *images;
     UIImage *imageforpalette;
-    NSString *filename;  
+    NSString *filename;
+    NSString *weather;
     MBProgressHUD *HUD;
     UIImageView *imageView;
     UIButton *generategifbutton;
 }
 
+@property(nonatomic, retain) NSString *weather;
 @property (nonatomic, retain) MBProgressHUD *HUD;
 @property(nonatomic,retain) NSMutableArray *times;
 @property(nonatomic,retain) NSString* filename;

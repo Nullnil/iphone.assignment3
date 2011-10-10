@@ -31,7 +31,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @synthesize HUD;
 @synthesize generategifbutton;
 @synthesize imageView;
-
+@synthesize weather;
 
 
 - (void)hudWasHidden:(MBProgressHUD *)hud {
@@ -267,9 +267,10 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
 
 
 /* perform UploadGIFController */
--(void)performUploadGIFController:(NSString*)name{
+-(void)performUploadGIFController{
     
-    uploadGIFController * upgif = [[uploadGIFController alloc] initWithFileName: name ];
+    uploadGIFController * upgif = [[uploadGIFController alloc] initWithFileName: self.filename
+                                                                     andWeather: self.weather ];
     //uploadGIFController *upgif = [[uploadGIFController alloc]init];
     
     if( upgif ){
@@ -279,8 +280,27 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
 }
 
 
+/* get weather information of local place */
+- (void)getWeather
 
--(BOOL)generateGIFfrompics{
+{
+    
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init]; // Top-level pool
+    
+    /* get weather code here */ 
+    
+    [pool release];  // Release the objects in the pool.
+    
+}
+
+
+
+
+-(void)generateGIFfrompics{
+    
+    /* create a new thread to get weather infomation of local place */
+    [NSThread detachNewThreadSelector:@selector(getWeather) toTarget:self withObject:nil];
+    
     
     NSString * fileName = [NSString stringWithFormat:@"%@/Documents/%@", 
                            NSHomeDirectory(),[self generateNewGifName ]];
@@ -351,7 +371,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
 	HUD.labelText = @"Completed";
     sleep(2);
     
-    [self performUploadGIFController:self.filename];
+    [self performUploadGIFController];
     
     
 }

@@ -21,16 +21,20 @@
     NSString *username;
     NSString *password;
     MBProgressHUD *HUD;
+    NSString *weather;
 }
 
 
+@property(nonatomic,retain) NSString *weather;
 @property(nonatomic,retain) NSString *username;
 @property(nonatomic,retain) NSString *password;
 @property(nonatomic,retain) NSString* filename;
 @property (nonatomic, retain) MBProgressHUD *HUD;
 @property (nonatomic, retain) IBOutlet UIButton *shareToTumblr;
 
--(id)initWithFileName:(NSString*)name;
+-(id)initWithFileName:(NSString*)name 
+           andWeather:(NSString*)weatherInfo;
+
 - (IBAction)share:(id)sender;
 - (void)hudWasHidden:(MBProgressHUD *)hud;
 - (void)passUserInfo:(NSString*)usrname password:(NSString*)pass; 

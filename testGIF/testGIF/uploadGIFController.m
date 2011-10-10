@@ -12,6 +12,7 @@
 @synthesize shareToTumblr;
 @synthesize HUD;
 @synthesize filename;
+@synthesize weather;
 @synthesize username;
 @synthesize password;
 
@@ -138,10 +139,12 @@
 }
 
 
--(id)initWithFileName:(NSString*)name{
+-(id)initWithFileName:(NSString*)name 
+           andWeather:(NSString*)weatherInfo{
     self = [ super init ];
     if( self ){
         self.filename = name; 
+        self.weather = weatherInfo;
     }
     
     return self;
@@ -172,6 +175,11 @@
 {
     [super viewDidLoad];
     self.HUD = nil;
+    /*
+    NSData *data = [[ NSData alloc] initWithContentsOfFile:self.filename];
+    self.webview = [[UIWebView alloc] init];
+    [ self.webview loadData:data MIMEType:@"image/gif" textEncodingName:@"utf-8" baseURL:nil ];
+     */
     // Do any additional setup after loading the view from its nib.
 }
 

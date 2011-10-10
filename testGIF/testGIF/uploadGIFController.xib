@@ -45,7 +45,7 @@
 					<object class="IBUIButton" id="871199598">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{123, 210}, {74, 37}}</string>
+						<string key="NSFrame">{{123, 310}, {74, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<string key="NSReuseIdentifierKey">_NS:222</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -75,7 +75,7 @@
 					<object class="IBUIButton" id="698365058">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{96, 105}, {140, 37}}</string>
+						<string key="NSFrame">{{95, 233}, {140, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="871199598"/>
 						<string key="NSReuseIdentifierKey">_NS:222</string>
@@ -214,7 +214,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">13</int>
+			<int key="maxID">15</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
