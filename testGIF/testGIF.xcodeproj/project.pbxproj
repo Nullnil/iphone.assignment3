@@ -45,6 +45,8 @@
 		016069C21440C06E00801FDA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016069C11440C06D00801FDA /* MobileCoreServices.framework */; };
 		016069C41440C08B00801FDA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 016069C31440C08B00801FDA /* libz.dylib */; };
 		016069C71440CB7500801FDA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 016069C61440CB7300801FDA /* MBProgressHUD.m */; };
+		018735ED14429D1800D4A882 /* loginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 018735EB14429D1800D4A882 /* loginView.m */; };
+		018735EE14429D1800D4A882 /* loginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 018735EC14429D1800D4A882 /* loginView.xib */; };
 		01FCE3091441745B002A6E4E /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 01FCE3081441745B002A6E4E /* Checkmark.png */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,9 @@
 		016069C31440C08B00801FDA /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		016069C51440CB7100801FDA /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		016069C61440CB7300801FDA /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		018735EA14429D1800D4A882 /* loginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginView.h; sourceTree = "<group>"; };
+		018735EB14429D1800D4A882 /* loginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginView.m; sourceTree = "<group>"; };
+		018735EC14429D1800D4A882 /* loginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginView.xib; sourceTree = "<group>"; };
 		01FCE3081441745B002A6E4E /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,6 +213,9 @@
 				0160699214408CDE00801FDA /* VideoTakingController.xib */,
 				0160698D14408ABC00801FDA /* VideoTakingController.h */,
 				0160698E14408ABD00801FDA /* VideoTakingController.m */,
+				018735EA14429D1800D4A882 /* loginView.h */,
+				018735EB14429D1800D4A882 /* loginView.m */,
+				018735EC14429D1800D4A882 /* loginView.xib */,
 				016069841440898A00801FDA /* GiraffeAppDelegate.h */,
 				016069981440A0C000801FDA /* UploadGIFController.h */,
 				016069991440A0C000801FDA /* uploadGIFController.m */,
@@ -322,6 +330,7 @@
 				0160699314408CDE00801FDA /* VideoTakingController.xib in Resources */,
 				0160699C1440A0C600801FDA /* uploadGIFController.xib in Resources */,
 				01FCE3091441745B002A6E4E /* Checkmark.png in Resources */,
+				018735EE14429D1800D4A882 /* loginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +365,7 @@
 				016069B91440BFC400801FDA /* ASINetworkQueue.m in Sources */,
 				016069BC1440BFD500801FDA /* Reachability.m in Sources */,
 				016069C71440CB7500801FDA /* MBProgressHUD.m in Sources */,
+				018735ED14429D1800D4A882 /* loginView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

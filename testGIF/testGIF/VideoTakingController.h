@@ -43,7 +43,6 @@
 
 
 -(IBAction)generateGIF:(id)sender;
--(void)showNormalWaitingScreen:(NSString*)notification;
 - (void)hudWasHidden:(MBProgressHUD *)hud;
 
 

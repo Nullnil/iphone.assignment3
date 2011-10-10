@@ -178,7 +178,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
  
 }
 
-
+#define MAXDURATION 5
 
 -(void)popCamera{
     
@@ -193,6 +193,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     picker.wantsFullScreenLayout = NO;
     picker.navigationBarHidden = NO;
+    picker.videoMaximumDuration = MAXDURATION;
     [ self presentModalViewController:picker
                              animated:YES ];
     
@@ -311,7 +312,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     for( UIImage* im in self.images ){
         
         /* increment progress */
-        progress += ((float)i)/(self.images.count+10);
+        progress += ((float)i)/(self.images.count*2);
         NSLog(@"%f\n", progress);
         self.HUD.progress = progress;
         

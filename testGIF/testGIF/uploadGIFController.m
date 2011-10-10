@@ -12,6 +12,18 @@
 @synthesize shareToTumblr;
 @synthesize HUD;
 @synthesize filename;
+@synthesize username;
+@synthesize password;
+
+- (void)passUserInfo:(NSString*)usrname 
+            password:(NSString*)pass
+{
+  
+    self.username = usrname;
+    self.password = pass;
+    NSLog(@"%@:%@", self.username, self.password);
+}
+
 
 
 - (void)hudWasHidden:(MBProgressHUD *)hud {
@@ -23,15 +35,19 @@
 
 
 
--(void)sharetoTumblr{
+-(void)uploadtoTumblr{
     
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:
                                    [NSURL URLWithString:@"https://www.tumblr.com/api/write"]];
+
+   
+    //request.shouldPresentAuthenticationDialog = YES;
     
-    
-    
-    [request setPostValue:@"janusle@gmail.com" forKey:@"email"];
-    [request setPostValue:@"YUYANGMM" forKey:@"password"];
+   
+    //[request setPostValue:@"janusle@gmail.com" forKey:@"email"];
+    [request setPostValue:self.username forKey:@"email"];
+    //[request setPostValue:@"YUYANGMM" forKey:@"password"];
+    [request setPostValue:self.password forKey:@"password"];
     [request setPostValue:@"photo" forKey:@"type"];
     [request setPostValue:@"test" forKey:@"title"];
     [request setPostValue:@"It's a test" forKey:@"body"]; 
@@ -71,22 +87,30 @@
     
     [request release]; 
     
-  
 }
 
 
-
-- (IBAction)uploadGIF:(id)sender {
+-(void)sharetoTumblr{
     
     HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
-	[self.navigationController.view addSubview:HUD];
+    [self.navigationController.view addSubview:HUD];
 	
     HUD.delegate = self;
     HUD.labelText = @"Uploading";
 	
-    [HUD showWhileExecuting:@selector(sharetoTumblr) onTarget:self withObject:nil animated:YES];
+    [HUD showWhileExecuting:@selector(uploadtoTumblr) onTarget:self withObject:nil animated:YES];
 
+}
+
+
+- (IBAction)share:(id)sender {
     
+    loginView* lv = [[loginView alloc] init];
+    lv.delegate = self;
+    [ self presentModalViewController:lv animated:YES ];
+    [ lv release ];
+    
+       
     
     /*
     
@@ -147,8 +171,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.HUD = nil;
     // Do any additional setup after loading the view from its nib.
 }
+
 
 - (void)viewDidUnload
 {
@@ -159,11 +185,13 @@
     // e.g. self.myOutlet = nil;
 }
 
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
 
 - (void)dealloc {
 
