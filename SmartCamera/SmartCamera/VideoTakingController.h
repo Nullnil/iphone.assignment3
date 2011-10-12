@@ -41,7 +41,12 @@
     BOOL hasLoaded;
     
     NSManagedObjectContext *managedObjectContext;
+    UITextField *imageTitle;
+    UILabel *imageLabel;
 }
+@property (nonatomic, retain) IBOutlet UILabel *imageLabel;
+@property (nonatomic, retain) IBOutlet UITextField *imageTitle;
+- (IBAction)dismissKeyBoard:(id)sender;
 
 @property (nonatomic, retain) MBProgressHUD *HUD;
 @property(nonatomic,retain) NSMutableArray *times;
@@ -61,4 +66,6 @@
 - (void)savePhotoData:(PhotoData*)photoData;
 
 - (void)WeatherReport:(WeatherReport *)loadData weatherFinished:(Weather *) weather;
+
+- (void) alert:(NSString*)message;
 @end

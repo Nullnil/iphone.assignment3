@@ -24,7 +24,8 @@
     
     albumController.managedObjectContext = self.managedObjectContext;
     videoTakingController.managedObjectContext = self.managedObjectContext;
-    
+    videoTakingController.imageTitle.hidden = YES;
+    videoTakingController.imageLabel.hidden = YES;
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

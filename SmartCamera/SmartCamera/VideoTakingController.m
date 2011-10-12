@@ -28,6 +28,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @synthesize images;
 @synthesize filename;
 @synthesize imageforpalette;
+@synthesize imageLabel;
+@synthesize imageTitle;
 @synthesize HUD;
 @synthesize generategifbutton;
 @synthesize imageView;
@@ -78,6 +80,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     NSURL *urlOfVideo = [ info objectForKey:UIImagePickerControllerMediaURL ];
     NSLog(@"Video URL = %@", urlOfVideo);
     
+    imageTitle.hidden = NO;
+    imageLabel.hidden = NO;
+    imageTitle.text = NULL;
+    generategifbutton.hidden = NO;
     // new asset 
     AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:urlOfVideo options:nil];
     // create new imagegenerator with asset 
@@ -182,7 +188,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     /* pop up camera */
     self.imageforpalette = nil;
     self.images = nil;
-    
     UIImagePickerController *picker = [[UIImagePickerController alloc] init ];
     picker.delegate = self;
     picker.allowsEditing = NO;
@@ -203,13 +208,16 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    imageTitle.hidden = YES;
+    imageLabel.hidden = YES;
+    generategifbutton.hidden = YES;
     hasLoaded = NO;
     weatherReport = [[WeatherReport alloc] init];
     weatherReport.delegate = self;
     /* show camera */
     if( ![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] )
     {
-        
         NSLog(@"No camera");
     }
     
@@ -231,6 +239,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
 - (void)viewDidUnload
 {
     
+    [self setImageTitle:nil];
+    [self setImageLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -248,6 +258,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
 
 - (void)dealloc {
     
+    [imageTitle release];
+    [imageLabel release];
     [super dealloc];
 }
 
@@ -269,7 +281,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
                                                                      andWeather: self.weather ];
     //uploadGIFController *upgif = [[uploadGIFController alloc]init];
     if( upgif ){
-        PhotoData *photoData = [[PhotoData alloc]initWithName:self.filename photoTitle:@"title" latitude:[[weatherReport location] latitude]longitude:[[weatherReport location] longitude] temperature:[weather currentTemperature] andWeatherDescription:[weather description] ];
+        PhotoData *photoData = [[PhotoData alloc]initWithName:self.filename photoTitle:[imageTitle text] latitude:[[weatherReport location] latitude]longitude:[[weatherReport location] longitude] temperature:[weather currentTemperature] andWeatherDescription:[weather description] ];
         [self savePhotoData:photoData];
         [photoData release];
         [self.navigationController pushViewController:upgif animated:YES];
@@ -277,6 +289,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     }
 }
 
+/* save data to core data*/
 - (void)savePhotoData:(PhotoData*)photoData{
     
     NSManagedObjectContext *context = [self managedObjectContext];
@@ -392,11 +405,15 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
 /* generate a gif from a series of thumbnails */
 - (IBAction)generateGIF:(id)sender {
     
+    if (imageTitle.text == NULL){
+        [self alert:@"Please inter image title"];
+    }else{
     HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
     
     /* create a new thread to get weather infomation of local place */
     [NSThread detachNewThreadSelector:@selector(getWeather) toTarget:self withObject:nil];
     HUD.delegate = self;
+    
     if( self.images.count != 0 ){
         /* display waiting screen and generate GIF */
         [self.navigationController.view addSubview:HUD];
@@ -409,6 +426,17 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
         [HUD show:YES];
         [HUD hide:YES afterDelay:1];
     }
-    
+    }
+}
+
+- (void) alert:(NSString*)message{
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Info" 
+                                                    message:message
+                                                   delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+}
+
+- (IBAction)dismissKeyBoard:(id)sender {
 }
 @end

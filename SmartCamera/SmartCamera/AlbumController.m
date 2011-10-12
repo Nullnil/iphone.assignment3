@@ -42,9 +42,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    NSManagedObjectContext *context = [self managedObjectContext];
-    photos = [[NSArray alloc] initWithArray:[Photo getPhotoWithContext:context]];
     
     if (!tableView && [self.view isKindOfClass:[UITableView class]]){
         tableView = (UITableView *)self.view;
@@ -77,6 +74,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    NSManagedObjectContext *context = [self managedObjectContext];
+    photos = [[NSArray alloc] initWithArray:[Photo getPhotoWithContext:context]];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
