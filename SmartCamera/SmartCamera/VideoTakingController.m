@@ -36,6 +36,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @synthesize weather;
 @synthesize weatherReport;
 @synthesize managedObjectContext;
+@synthesize rightButton;
 
 
 - (void)hudWasHidden:(MBProgressHUD *)hud {
@@ -55,6 +56,38 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     return newImage;
 }
 
+
+#define LOMO @"lomo.jpg"
+#define FISHEYE @"fisheye.jpg"
+#define SEA @"sea.jpg"
+-(void)changeBackground:(NSNumber*)i{
+    
+    NSInteger position = [ i intValue ];
+    /* change background of 'camera' to lomo */
+    if( position == 0 ){
+        
+        self.view.backgroundColor =  [ UIColor colorWithPatternImage:
+                                     [self resizeUIImage:[UIImage imageNamed:LOMO]
+                                            scaledToSize:CGSizeMake(320, 350)]];
+    }
+    
+    /* change background of 'camera' to fisheye */
+    if( position == 1 ){
+        
+        self.view.backgroundColor =  [ UIColor colorWithPatternImage:
+                                     [self resizeUIImage:[UIImage imageNamed:FISHEYE]
+                                            scaledToSize:CGSizeMake(320, 350)]];
+    }
+    
+    
+    /* change background of 'camera' to pics */
+    if( position == 2 ){
+
+        self.view.backgroundColor =  [ UIColor colorWithPatternImage:
+                                     [self resizeUIImage:[UIImage imageNamed:SEA]
+                                            scaledToSize:CGSizeMake(320, 350)]];
+    }
+}
 
 
 
@@ -185,6 +218,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
 
 -(IBAction)popCamera:(id)sender{
     
+    /* disable right button on navigation bar */
+    rightButton.enabled = NO;
+    
     /* pop up camera */
     self.imageforpalette = nil;
     self.images = nil;
@@ -203,11 +239,24 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
 }
 
-
+#define DEFAULTBACKGROUNDIMG @"lomo.jpg"
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    /* set background */
+    self.view.backgroundColor = [ UIColor colorWithPatternImage:
+                                  [self resizeUIImage:[UIImage imageNamed:DEFAULTBACKGROUNDIMG]
+                                        scaledToSize:CGSizeMake(320, 350)]];
+    self.navigationItem.title = @"Smart Camera";                    
+    
+    /* set right button on navigation bar */
+    rightButton = [[ UIBarButtonItem alloc ] initWithTitle: @"share image"
+                                                     style:UIBarButtonItemStyleDone 
+                                                    target:self
+                                                    action:@selector(performUploadGIFController)];
+    rightButton.enabled = NO;
+    self.navigationItem.rightBarButtonItem = rightButton;
     
     imageTitle.hidden = YES;
     imageLabel.hidden = YES;
@@ -215,7 +264,8 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     hasLoaded = NO;
     weatherReport = [[WeatherReport alloc] init];
     weatherReport.delegate = self;
-    /* show camera */
+    
+    /* check camera */
     if( ![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] )
     {
         NSLog(@"No camera");
@@ -284,10 +334,14 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
         PhotoData *photoData = [[PhotoData alloc]initWithName:self.filename photoTitle:[imageTitle text] latitude:[[weatherReport location] latitude]longitude:[[weatherReport location] longitude] temperature:[weather currentTemperature] andWeatherDescription:[weather description] ];
         [self savePhotoData:photoData];
         [photoData release];
+        /* enable rightButton on navigation bar */
+        rightButton.enabled = YES;
         [self.navigationController pushViewController:upgif animated:YES];
-        [upgif release];
+        
     }
+    [upgif release];
 }
+
 
 /* save data to core data*/
 - (void)savePhotoData:(PhotoData*)photoData{
@@ -295,6 +349,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     NSManagedObjectContext *context = [self managedObjectContext];
     [Photo savePhotoWithPhotoData:photoData inManagedObjectContext:context];
 }
+
 
 /* get weather information of local place */
 - (void)getWeather
@@ -324,6 +379,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     }
     NSLog(@"weather: %@",[weather currentTemperature]);
 }
+
 
 -(void)generateGIFfrompics{
     
@@ -402,6 +458,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
 }
 
 
+
 /* generate a gif from a series of thumbnails */
 - (IBAction)generateGIF:(id)sender {
     
@@ -429,6 +486,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     }
 }
 
+
 - (void) alert:(NSString*)message{
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Info" 
                                                     message:message
@@ -436,6 +494,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     [alert show];
     [alert release];
 }
+
 
 - (IBAction)dismissKeyBoard:(id)sender {
 }

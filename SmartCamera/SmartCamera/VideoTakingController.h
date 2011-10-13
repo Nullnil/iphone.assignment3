@@ -39,28 +39,35 @@
     Weather *weather;
     WeatherReport *weatherReport;
     BOOL hasLoaded;
+    UIBarButtonItem *rightButton;
     
     NSManagedObjectContext *managedObjectContext;
     UITextField *imageTitle;
     UILabel *imageLabel;
 }
+
+
 @property (nonatomic, retain) IBOutlet UILabel *imageLabel;
 @property (nonatomic, retain) IBOutlet UITextField *imageTitle;
-- (IBAction)dismissKeyBoard:(id)sender;
+@property (nonatomic, retain) IBOutlet UIButton *generategifbutton;
+@property (nonatomic, retain) IBOutlet UIImageView *imageView;
+@property (nonatomic,retain)  UIBarButtonItem *rightButton;
+
+
 
 @property (nonatomic, retain) MBProgressHUD *HUD;
 @property(nonatomic,retain) NSMutableArray *times;
 @property(nonatomic,retain) NSString* filename;
 @property(nonatomic,retain) NSMutableArray *images;
 @property (nonatomic,retain) UIImage *imageforpalette;
-@property (nonatomic, retain) IBOutlet UIButton *generategifbutton;
-@property (nonatomic, retain) IBOutlet UIImageView *imageView;
 @property (nonatomic, retain) Weather *weather;
 @property (nonatomic, retain) WeatherReport* weatherReport;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;;
 
+- (IBAction)dismissKeyBoard:(id)sender;
 
 -(IBAction)generateGIF:(id)sender;
+
 - (void)hudWasHidden:(MBProgressHUD *)hud;
 
 - (void)savePhotoData:(PhotoData*)photoData;

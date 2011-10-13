@@ -18,28 +18,38 @@
 @interface UploadGIFController : UIViewController<UIViewPassUserInfoeDelegate>
 {
     NSString *filename; 
-    IBOutlet UIButton *shareToTumblr;
     NSString *username;
     NSString *password;
     MBProgressHUD *HUD;
     Weather *weather;
 
+    UIButton *shareToTumblr;
+    UISwitch *swith;
+    UITextField *textField;
 }
 
 
+
+@property (nonatomic, retain) IBOutlet UITextField *textField;
 @property(nonatomic,retain) NSString *username;
 @property(nonatomic,retain) NSString *password;
 @property(nonatomic,retain) NSString* filename;
 @property (nonatomic, retain) MBProgressHUD *HUD;
 @property (nonatomic, retain) IBOutlet UIButton *shareToTumblr;
 @property (nonatomic, retain) Weather *weather;
+@property (nonatomic, retain) IBOutlet UISwitch *swith;
+
+
+- (IBAction)dissmissKeyboard:(id)sender;
 
 -(id)initWithFileName:(NSString*)name 
            andWeather:(Weather*)weatherInfo;
+
 - (IBAction)share:(id)sender;
+
 - (void)hudWasHidden:(MBProgressHUD *)hud;
+
 - (void)passUserInfo:(NSString*)usrname password:(NSString*)pass; 
 
-- (UIWebView *)initWebView;
 
 @end

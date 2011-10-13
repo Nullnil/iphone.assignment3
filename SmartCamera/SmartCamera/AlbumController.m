@@ -190,8 +190,8 @@
     Photo *currentPhoto = [photos objectAtIndex:[indexPath row]];
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     
-    //UIImage *image = [self resizeUIImage:[UIImage imageWithContentsOfFile:[currentPhoto name]] scaledToSize:CGSizeMake(44,44)];
-    //[[cell imageView] setImage:image];
+    UIImage *image = [self resizeUIImage:[UIImage imageWithContentsOfFile:[currentPhoto name]] scaledToSize:CGSizeMake(44,44)];
+    [[cell imageView] setImage:image];
     [[cell textLabel] setText:[currentPhoto title]];
     // Configure the cell...
     

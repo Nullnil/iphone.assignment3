@@ -18,7 +18,7 @@
 @dynamic weatherDescription;
 
 
-+ (NSArray *)getPhotoWithContext:context{
++ (NSArray *)getPhotoWithContext:(NSManagedObjectContext*) context{
     NSError *error;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Photo" 
@@ -28,6 +28,7 @@
     [fetchRequest release];
     return fetchedObjects;
 }
+
 
 + (Photo *) savePhotoWithPhotoData:(PhotoData *)photoData inManagedObjectContext:(NSManagedObjectContext *)context{
     
@@ -46,16 +47,17 @@
     [photo setValue: photoData.temperature forKey:@"temperature"];
     [photo setValue: photoData.weatherDescription forKey:@"weatherDescription"];
     
-    NSError *error;
+    NSError **error;
 	
 	// here's where the actual save happens, and if it doesn't we print something out to the console
-	if (![context save:&error]) 
+	if (![context save:error]) 
 	{
-		NSLog(@"Problem saving: %@", [error localizedDescription]);
+		NSLog(@"Problem saving: %@", [*error localizedDescription]);
 	}
     
     return photo;
 }
+
 
 - (CLLocationCoordinate2D)coordinate{
     CLLocationCoordinate2D location;
