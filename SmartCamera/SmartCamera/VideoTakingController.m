@@ -330,7 +330,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     NSString * fileName = [NSString stringWithFormat:@"%@/Documents/%@", 
                            NSHomeDirectory(),[self generateNewGifName ]];
     self.filename = fileName;
-    NSLog(@"%@", fileName);
     
     ANPoint *mattePoint = [[ANPoint alloc] initWithR:255 withG:255 withB:255];
     
@@ -407,25 +406,26 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
     if (imageTitle.text == NULL){
         [self alert:@"Please inter image title"];
+        return;
     }else{
-    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
     
-    /* create a new thread to get weather infomation of local place */
-    [NSThread detachNewThreadSelector:@selector(getWeather) toTarget:self withObject:nil];
-    HUD.delegate = self;
+        /* create a new thread to get weather infomation of local place */
+        [NSThread detachNewThreadSelector:@selector(getWeather) toTarget:self withObject:nil];
+        HUD.delegate = self;
     
-    if( self.images.count != 0 ){
-        /* display waiting screen and generate GIF */
-        [self.navigationController.view addSubview:HUD];
-        HUD.labelText = @"Preparing";
-        //HUD.detailsLabelText = @"It will take about 5 seconds";
-        [HUD showWhileExecuting:@selector(generateGIFfrompics) onTarget:self withObject:nil animated:YES];  
-    }
-    else{
-        HUD.labelText = @"Fail to generate GIF";
-        [HUD show:YES];
-        [HUD hide:YES afterDelay:1];
-    }
+        if( self.images.count != 0 ){
+            /* display waiting screen and generate GIF */
+            [self.navigationController.view addSubview:HUD];
+            HUD.labelText = @"Preparing";
+            //HUD.detailsLabelText = @"It will take about 5 seconds";
+            [HUD showWhileExecuting:@selector(generateGIFfrompics) onTarget:self withObject:nil animated:YES];  
+        }
+        else{
+            HUD.labelText = @"Fail to generate GIF";
+            [HUD show:YES];
+            [HUD hide:YES afterDelay:1];
+        }
     }
 }
 

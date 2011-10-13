@@ -24,5 +24,5 @@
 
 
 + (Photo *) savePhotoWithPhotoData:(PhotoData *)photoData inManagedObjectContext:(NSManagedObjectContext *)context;
-+ (NSArray *)getPhotoWithContext:context;
++ (NSArray *)getPhotoWithContext:(NSManagedObjectContext *)context;
 @end

@@ -18,7 +18,7 @@
 @dynamic weatherDescription;
 
 
-+ (NSArray *)getPhotoWithContext:context{
++ (NSArray *)getPhotoWithContext:(NSManagedObjectContext *)context{
     NSError *error;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Photo" 
