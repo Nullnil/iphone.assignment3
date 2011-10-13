@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0129BC191446F09C0087FF9C /* lomo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0129BC181446F09C0087FF9C /* lomo.jpg */; };
+		0129BC1B1446FD270087FF9C /* fisheye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0129BC1A1446FD270087FF9C /* fisheye.jpg */; };
+		0129BC1F144737590087FF9C /* sea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0129BC1E144737590087FF9C /* sea.jpg */; };
 		A613FCBF1441969800F72B67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FCBE1441969800F72B67 /* UIKit.framework */; };
 		A613FCC11441969800F72B67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FCC01441969800F72B67 /* Foundation.framework */; };
 		A613FCC31441969800F72B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FCC21441969800F72B67 /* CoreGraphics.framework */; };
@@ -59,12 +62,10 @@
 		A613FDD9144305F100F72B67 /* UploadGIFController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A613FDD7144305F000F72B67 /* UploadGIFController.xib */; };
 		A6E997E6144351FB0050F511 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E997E5144351FB0050F511 /* Location.m */; };
 		A6E997EA144352530050F511 /* WeatherReport.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E997E9144352530050F511 /* WeatherReport.m */; };
-		A6E9982B1443F58B0050F511 /* image.gif in Resources */ = {isa = PBXBuildFile; fileRef = A6E9982A1443F58B0050F511 /* image.gif */; };
 		A6E99836144407910050F511 /* PhotoData.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E99835144407910050F511 /* PhotoData.m */; };
 		A6E99839144412F50050F511 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E99838144412F50050F511 /* Photo.m */; };
 		A6E99849144447BD0050F511 /* AlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E99847144447B70050F511 /* AlbumController.m */; };
 		A6E9984A144447BD0050F511 /* AlbumController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E99848144447B90050F511 /* AlbumController.xib */; };
-		A6E9984C14444DF30050F511 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = A6E9984B14444DF20050F511 /* image.png */; };
 		A6E9985314449BC70050F511 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E9985214449BC50050F511 /* User.m */; };
 		A6E9985D1444A0CE0050F511 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E9985C1444A0CE0050F511 /* FileManager.m */; };
 		A6E998661444ABEA0050F511 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E998641444ABEA0050F511 /* Setting.m */; };
@@ -72,6 +73,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0129BC181446F09C0087FF9C /* lomo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lomo.jpg; path = SmartCamera/lomo.jpg; sourceTree = "<group>"; };
+		0129BC1A1446FD270087FF9C /* fisheye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fisheye.jpg; sourceTree = "<group>"; };
+		0129BC1E144737590087FF9C /* sea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sea.jpg; sourceTree = "<group>"; };
 		A613FCBA1441969800F72B67 /* SmartCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A613FCBE1441969800F72B67 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A613FCC01441969800F72B67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -162,7 +166,6 @@
 		A6E997E5144351FB0050F511 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		A6E997E8144352530050F511 /* WeatherReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherReport.h; sourceTree = "<group>"; };
 		A6E997E9144352530050F511 /* WeatherReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherReport.m; sourceTree = "<group>"; };
-		A6E9982A1443F58B0050F511 /* image.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = image.gif; sourceTree = "<group>"; };
 		A6E99834144407910050F511 /* PhotoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoData.h; sourceTree = "<group>"; };
 		A6E99835144407910050F511 /* PhotoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoData.m; sourceTree = "<group>"; };
 		A6E99837144412F40050F511 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
@@ -170,7 +173,6 @@
 		A6E99846144447B60050F511 /* AlbumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumController.h; sourceTree = "<group>"; };
 		A6E99847144447B70050F511 /* AlbumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumController.m; sourceTree = "<group>"; };
 		A6E99848144447B90050F511 /* AlbumController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumController.xib; sourceTree = "<group>"; };
-		A6E9984B14444DF20050F511 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		A6E9985114449BC00050F511 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		A6E9985214449BC50050F511 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		A6E9985B1444A0CD0050F511 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
@@ -242,8 +244,6 @@
 		A613FCC61441969800F72B67 /* SmartCamera */ = {
 			isa = PBXGroup;
 			children = (
-				A6E9984B14444DF20050F511 /* image.png */,
-				A6E9982A1443F58B0050F511 /* image.gif */,
 				A6E997E4144351FB0050F511 /* Location.h */,
 				A6E997E5144351FB0050F511 /* Location.m */,
 				A6E997E8144352530050F511 /* WeatherReport.h */,
@@ -301,6 +301,9 @@
 		A613FCF61441A2CF00F72B67 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				0129BC1E144737590087FF9C /* sea.jpg */,
+				0129BC1A1446FD270087FF9C /* fisheye.jpg */,
+				0129BC181446F09C0087FF9C /* lomo.jpg */,
 				A613FCF71441A31A00F72B67 /* Checkmark.png */,
 			);
 			name = images;
@@ -427,10 +430,11 @@
 				A613FD601441CF8F00F72B67 /* DetailViewController.xib in Resources */,
 				A613FDD11442FDB600F72B67 /* loginView.xib in Resources */,
 				A613FDD9144305F100F72B67 /* UploadGIFController.xib in Resources */,
-				A6E9982B1443F58B0050F511 /* image.gif in Resources */,
 				A6E9984A144447BD0050F511 /* AlbumController.xib in Resources */,
-				A6E9984C14444DF30050F511 /* image.png in Resources */,
 				A6E998671444ABEA0050F511 /* Setting.xib in Resources */,
+				0129BC191446F09C0087FF9C /* lomo.jpg in Resources */,
+				0129BC1B1446FD270087FF9C /* fisheye.jpg in Resources */,
+				0129BC1F144737590087FF9C /* sea.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

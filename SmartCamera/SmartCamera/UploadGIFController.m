@@ -12,6 +12,8 @@
 @synthesize shareToTumblr;
 @synthesize HUD;
 @synthesize filename;
+@synthesize swith;
+@synthesize textField;
 @synthesize username;
 @synthesize password;
 @synthesize weather;
@@ -35,40 +37,62 @@
 }
 
 
+#define UPLOADPICTURENAME @"share.gif"
 
 -(void)uploadtoTumblr{
     
+    
+    NSLog(@"Start");
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:
                                    [NSURL URLWithString:@"https://www.tumblr.com/api/write"]];
     
     
-    //request.shouldPresentAuthenticationDialog = YES;
-    
-    
-    //[request setPostValue:@"janusle@gmail.com" forKey:@"email"];
     [request setPostValue:self.username forKey:@"email"];
-    //[request setPostValue:@"YUYANGMM" forKey:@"password"];
     [request setPostValue:self.password forKey:@"password"];
     [request setPostValue:@"photo" forKey:@"type"];
-    [request setPostValue:@"test" forKey:@"title"];
-    [request setPostValue:@"It's a test" forKey:@"body"]; 
-    [request setFile:self.filename withFileName:@"test.gif" andContentType:@"image/gif"
+    NSString* caption;
+    
+    if ( swith.on == YES )
+        caption = [[NSString alloc] initWithFormat: @"Weather: %@ I want to say: %@",
+                           self.weather.description , self.textField.text ];
+    else
+        caption = [[NSString alloc] initWithFormat: @"I want to say: %@",
+                   self.weather.description , self.textField.text ];
+    
+    [request setPostValue:caption forKey:@"caption"];
+    [ caption release ];
+    [request setFile:self.filename withFileName:UPLOADPICTURENAME andContentType:@"image/gif"
               forKey:@"data"];
     [request startSynchronous];
     
+    NSLog(@"Initializing done");
+    
     NSError *error = [request error];
     if (!error) {
+        
         int statusCode = [request responseStatusCode];
         NSLog(@"%d", statusCode );
-        NSLog(@"Upload successfully");
         
-        /* display complete screen */
-        HUD.customView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Checkmark.png"]] autorelease];
-        HUD.mode = MBProgressHUDModeCustomView;
-        HUD.labelText = @"Completed";
-        sleep(2);
+        /* status Code is 2xx */
+        if ( statusCode >= 200 && statusCode <= 300 ){
+          NSLog(@"Upload successfully");
+        
+          /* display complete screen */
+          HUD.customView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Checkmark.png"]] autorelease];
+          HUD.mode = MBProgressHUDModeCustomView;
+          HUD.labelText = @"Completed";
+          sleep(2);
+        }
+        else
+        {
+          HUD.labelText = @"Failed to upload";
+          HUD.detailsLabelText = @"Please check network settings";
+          sleep(2);
+        }
+        
     }
     else{
+        
         int statusCode = [request responseStatusCode];
         NSLog(@"%d", statusCode);
         NSLog(@"%@", [request responseStatusMessage]);
@@ -78,16 +102,16 @@
         NSLog(@"%@",[ error localizedFailureReason]);
         
         /* display failure screen */
-        //HUD.customView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Checkmark.png"]] autorelease];
-        HUD.mode = MBProgressHUDModeCustomView;
-        HUD.labelText = @"Completed";
+        HUD.labelText = @"Failed to upload";
+        HUD.detailsLabelText = @"Please check network settings";
         sleep(2);
         
     }
     
     [request release]; 
-    
+    NSLog(@"Finish to upload");
 }
+
 
 
 -(void)sharetoTumblr{
@@ -103,6 +127,7 @@
 }
 
 
+
 - (IBAction)share:(id)sender {
     
     
@@ -115,33 +140,18 @@
         User *user = [FileManager readFromFile:@"user.txt"];
         [self passUserInfo:user.userName password:user.password];
         [self sharetoTumblr];
+        //[ user release ];
     }
     
     
-    /*
-     
-     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
-     picker.mailComposeDelegate = self;
-     [picker setSubject:@"Picture from my iPhone!"];
-     
-     
-     NSString *emailBody = @"I just took this picture, check it out.";
-     
-     [picker setMessageBody:emailBody isHTML:YES];
-     
-     
-     NSData *image = [[NSData alloc] initWithContentsOfFile:self.filename]; 
-     
-     
-     [picker addAttachmentData:image mimeType:@"image/gif" fileName:@"CameraImage"];
-     
-     
-     [self presentModalViewController:picker animated:YES];
-     
-     [picker release];
-     */
-    
 }
+
+
+
+- (IBAction)dissmissKeyboard:(id)sender {
+}
+
+
 
 -(id)initWithFileName:(NSString*)name 
            andWeather:(Weather*)weatherInfo{
@@ -154,6 +164,8 @@
     return self;
 }
 
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -162,6 +174,8 @@
     }
     return self;
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -183,29 +197,17 @@
 }
 
 
-- (UIWebView *)initWebView{
-    
-    //UIWebView *myWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 440)];
-    
-    /*NSString* gifFileName = @"image.gif";
-	NSMutableString* htmlStr = [NSMutableString string];
-	[htmlStr appendString:@"<p><img src=\""];
-	[htmlStr appendFormat:@"%@",gifFileName];
-	[htmlStr appendString:@"\" alt=\"picture\"/>"];
-	[self.webView loadHTMLString:htmlStr baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle]bundlePath]]];    
-    return webView;*/
-    
-    return NULL;
-}
-
 - (void)viewDidUnload
 {
     
     [self setShareToTumblr:nil];
+    [self setSwith:nil];
+    [self setTextField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
+
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -215,9 +217,12 @@
 }
 
 
+
 - (void)dealloc {
     
     [shareToTumblr release];
+    [swith release];
+    [textField release];
     [super dealloc];
 }
 @end
