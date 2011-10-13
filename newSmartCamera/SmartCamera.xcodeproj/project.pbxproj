@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0129BC191446F09C0087FF9C /* lomo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0129BC181446F09C0087FF9C /* lomo.jpg */; };
+		0129BC1B1446FD270087FF9C /* fisheye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0129BC1A1446FD270087FF9C /* fisheye.jpg */; };
+		0129BC1F144737590087FF9C /* sea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0129BC1E144737590087FF9C /* sea.jpg */; };
+		A613FCBF1441969800F72B67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FCBE1441969800F72B67 /* UIKit.framework */; };
+		A613FCC11441969800F72B67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FCC01441969800F72B67 /* Foundation.framework */; };
+		A613FCC31441969800F72B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FCC21441969800F72B67 /* CoreGraphics.framework */; };
+		A613FCC51441969800F72B67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FCC41441969800F72B67 /* CoreData.framework */; };
+		A613FCCB1441969800F72B67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A613FCC91441969800F72B67 /* InfoPlist.strings */; };
+		A613FCCD1441969800F72B67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FCCC1441969800F72B67 /* main.m */; };
+		A613FCD11441969800F72B67 /* SmartCameraAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FCD01441969800F72B67 /* SmartCameraAppDelegate.m */; };
+		A613FCD41441969800F72B67 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A613FCD21441969800F72B67 /* MainWindow.xib */; };
+		A613FCD71441969900F72B67 /* SmartCamera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A613FCD51441969900F72B67 /* SmartCamera.xcdatamodeld */; };
+		A613FCDE144196B100F72B67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FCDD144196B100F72B67 /* CoreLocation.framework */; };
+		A613FCF81441A31A00F72B67 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = A613FCF71441A31A00F72B67 /* Checkmark.png */; };
+		A613FD101441A36300F72B67 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FCFB1441A36300F72B67 /* Reachability.m */; };
+		A613FD111441A36300F72B67 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FCFD1441A36300F72B67 /* ASIAuthenticationDialog.m */; };
+		A613FD121441A36300F72B67 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD001441A36300F72B67 /* ASIDataCompressor.m */; };
+		A613FD131441A36300F72B67 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD021441A36300F72B67 /* ASIDataDecompressor.m */; };
+		A613FD141441A36300F72B67 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD041441A36300F72B67 /* ASIDownloadCache.m */; };
+		A613FD151441A36300F72B67 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD061441A36300F72B67 /* ASIFormDataRequest.m */; };
+		A613FD161441A36300F72B67 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD081441A36300F72B67 /* ASIHTTPRequest.m */; };
+		A613FD171441A36300F72B67 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD0C1441A36300F72B67 /* ASIInputStream.m */; };
+		A613FD181441A36300F72B67 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD0E1441A36300F72B67 /* ASINetworkQueue.m */; };
+		A613FD321441A3B500F72B67 /* VideoTakingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A613FD1A1441A3B500F72B67 /* VideoTakingController.xib */; };
+		A613FD331441A3B500F72B67 /* VideoTakingController.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD1C1441A3B500F72B67 /* VideoTakingController.m */; };
+		A613FD361441A3B500F72B67 /* GiraffeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD211441A3B500F72B67 /* GiraffeAppDelegate.m */; };
+		A613FD371441A3B500F72B67 /* GiraffeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD231441A3B500F72B67 /* GiraffeViewController.m */; };
+		A613FD381441A3B500F72B67 /* ANBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD251441A3B500F72B67 /* ANBlock.m */; };
+		A613FD391441A3B500F72B67 /* ANGifBitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD271441A3B500F72B67 /* ANGifBitmap.m */; };
+		A613FD3A1441A3B500F72B67 /* ANGifEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD291441A3B500F72B67 /* ANGifEncoder.m */; };
+		A613FD3B1441A3B500F72B67 /* ANGifPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD2B1441A3B500F72B67 /* ANGifPalette.m */; };
+		A613FD3C1441A3B500F72B67 /* ANImageBitmapRep.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD2D1441A3B500F72B67 /* ANImageBitmapRep.m */; };
+		A613FD3D1441A3B500F72B67 /* ANPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD2F1441A3B500F72B67 /* ANPoint.m */; };
+		A613FD3E1441A3B500F72B67 /* BitBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD301441A3B500F72B67 /* BitBuffer.m */; };
+		A613FD411441A6B600F72B67 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD401441A6B600F72B67 /* MBProgressHUD.m */; };
+		A613FD431441A6F200F72B67 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FD421441A6F100F72B67 /* MobileCoreServices.framework */; };
+		A613FD451441A6FC00F72B67 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FD441441A6FC00F72B67 /* SystemConfiguration.framework */; };
+		A613FD471441A70300F72B67 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FD461441A70300F72B67 /* CFNetwork.framework */; };
+		A613FD491441A71100F72B67 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FD481441A71100F72B67 /* AVFoundation.framework */; };
+		A613FD4B1441A71E00F72B67 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FD4A1441A71E00F72B67 /* CoreMedia.framework */; };
+		A613FD4D1441A77C00F72B67 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FD4C1441A77C00F72B67 /* libz.dylib */; };
+		A613FD561441AE7400F72B67 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FD551441AE7400F72B67 /* MapKit.framework */; };
+		A613FD5F1441CF8F00F72B67 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD5D1441CF8F00F72B67 /* DetailViewController.m */; };
+		A613FD601441CF8F00F72B67 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A613FD5E1441CF8F00F72B67 /* DetailViewController.xib */; };
+		A613FD9C1441F9E800F72B67 /* MyCLController.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD9B1441F9E800F72B67 /* MyCLController.m */; };
+		A613FDA01441FA0800F72B67 /* XMLController.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FD9F1441FA0800F72B67 /* XMLController.m */; };
+		A613FDA21441FA2700F72B67 /* WeatherCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FDA11441FA2700F72B67 /* WeatherCollector.m */; };
+		A613FDA61441FA3400F72B67 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FDA41441FA3400F72B67 /* Weather.m */; };
+		A613FDA91441FA4300F72B67 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FDA81441FA4300F72B67 /* LocationController.m */; };
+		A613FDD01442FDB600F72B67 /* loginView.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FDCE1442FDB500F72B67 /* loginView.m */; };
+		A613FDD11442FDB600F72B67 /* loginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A613FDCF1442FDB600F72B67 /* loginView.xib */; };
+		A613FDD8144305F100F72B67 /* UploadGIFController.m in Sources */ = {isa = PBXBuildFile; fileRef = A613FDD6144305F000F72B67 /* UploadGIFController.m */; };
+		A613FDD9144305F100F72B67 /* UploadGIFController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A613FDD7144305F000F72B67 /* UploadGIFController.xib */; };
+		A6E997E6144351FB0050F511 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E997E5144351FB0050F511 /* Location.m */; };
+		A6E997EA144352530050F511 /* WeatherReport.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E997E9144352530050F511 /* WeatherReport.m */; };
+		A6E99836144407910050F511 /* PhotoData.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E99835144407910050F511 /* PhotoData.m */; };
+		A6E99839144412F50050F511 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E99838144412F50050F511 /* Photo.m */; };
+		A6E99849144447BD0050F511 /* AlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E99847144447B70050F511 /* AlbumController.m */; };
+		A6E9984A144447BD0050F511 /* AlbumController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E99848144447B90050F511 /* AlbumController.xib */; };
+		A6E9985314449BC70050F511 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E9985214449BC50050F511 /* User.m */; };
+		A6E9985D1444A0CE0050F511 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E9985C1444A0CE0050F511 /* FileManager.m */; };
+		A6E998661444ABEA0050F511 /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = A6E998641444ABEA0050F511 /* Setting.m */; };
+		A6E998671444ABEA0050F511 /* Setting.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6E998651444ABEA0050F511 /* Setting.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0129BC181446F09C0087FF9C /* lomo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lomo.jpg; path = SmartCamera/lomo.jpg; sourceTree = "<group>"; };
+		0129BC1A1446FD270087FF9C /* fisheye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fisheye.jpg; sourceTree = "<group>"; };
+		0129BC1E144737590087FF9C /* sea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sea.jpg; sourceTree = "<group>"; };
+		A613FCBA1441969800F72B67 /* SmartCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A613FCBE1441969800F72B67 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A613FCC01441969800F72B67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A613FCC21441969800F72B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A613FCC41441969800F72B67 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A613FCC81441969800F72B67 /* SmartCamera-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SmartCamera-Info.plist"; sourceTree = "<group>"; };
+		A613FCCA1441969800F72B67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A613FCCC1441969800F72B67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A613FCCE1441969800F72B67 /* SmartCamera-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartCamera-Prefix.pch"; sourceTree = "<group>"; };
+		A613FCCF1441969800F72B67 /* SmartCameraAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartCameraAppDelegate.h; sourceTree = "<group>"; };
+		A613FCD01441969800F72B67 /* SmartCameraAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartCameraAppDelegate.m; sourceTree = "<group>"; };
+		A613FCD31441969800F72B67 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		A613FCD61441969900F72B67 /* SmartCamera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmartCamera.xcdatamodel; sourceTree = "<group>"; };
+		A613FCDD144196B100F72B67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A613FCF71441A31A00F72B67 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
+		A613FCFA1441A36300F72B67 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A613FCFB1441A36300F72B67 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		A613FCFC1441A36300F72B67 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		A613FCFD1441A36300F72B67 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		A613FCFE1441A36300F72B67 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		A613FCFF1441A36300F72B67 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		A613FD001441A36300F72B67 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		A613FD011441A36300F72B67 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		A613FD021441A36300F72B67 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		A613FD031441A36300F72B67 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		A613FD041441A36300F72B67 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		A613FD051441A36300F72B67 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		A613FD061441A36300F72B67 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		A613FD071441A36300F72B67 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		A613FD081441A36300F72B67 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		A613FD091441A36300F72B67 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		A613FD0A1441A36300F72B67 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		A613FD0B1441A36300F72B67 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		A613FD0C1441A36300F72B67 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		A613FD0D1441A36300F72B67 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		A613FD0E1441A36300F72B67 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		A613FD0F1441A36300F72B67 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		A613FD1A1441A3B500F72B67 /* VideoTakingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoTakingController.xib; sourceTree = "<group>"; };
+		A613FD1B1441A3B500F72B67 /* VideoTakingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTakingController.h; sourceTree = "<group>"; };
+		A613FD1C1441A3B500F72B67 /* VideoTakingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTakingController.m; sourceTree = "<group>"; };
+		A613FD1D1441A3B500F72B67 /* GiraffeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiraffeAppDelegate.h; sourceTree = "<group>"; };
+		A613FD211441A3B500F72B67 /* GiraffeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiraffeAppDelegate.m; sourceTree = "<group>"; };
+		A613FD221441A3B500F72B67 /* GiraffeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiraffeViewController.h; sourceTree = "<group>"; };
+		A613FD231441A3B500F72B67 /* GiraffeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiraffeViewController.m; sourceTree = "<group>"; };
+		A613FD241441A3B500F72B67 /* ANBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANBlock.h; sourceTree = "<group>"; };
+		A613FD251441A3B500F72B67 /* ANBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANBlock.m; sourceTree = "<group>"; };
+		A613FD261441A3B500F72B67 /* ANGifBitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifBitmap.h; sourceTree = "<group>"; };
+		A613FD271441A3B500F72B67 /* ANGifBitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGifBitmap.m; sourceTree = "<group>"; };
+		A613FD281441A3B500F72B67 /* ANGifEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifEncoder.h; sourceTree = "<group>"; };
+		A613FD291441A3B500F72B67 /* ANGifEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGifEncoder.m; sourceTree = "<group>"; };
+		A613FD2A1441A3B500F72B67 /* ANGifPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANGifPalette.h; sourceTree = "<group>"; };
+		A613FD2B1441A3B500F72B67 /* ANGifPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANGifPalette.m; sourceTree = "<group>"; };
+		A613FD2C1441A3B500F72B67 /* ANImageBitmapRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANImageBitmapRep.h; sourceTree = "<group>"; };
+		A613FD2D1441A3B500F72B67 /* ANImageBitmapRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANImageBitmapRep.m; sourceTree = "<group>"; };
+		A613FD2E1441A3B500F72B67 /* ANPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANPoint.h; sourceTree = "<group>"; };
+		A613FD2F1441A3B500F72B67 /* ANPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANPoint.m; sourceTree = "<group>"; };
+		A613FD301441A3B500F72B67 /* BitBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitBuffer.m; sourceTree = "<group>"; };
+		A613FD311441A3B500F72B67 /* BitBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitBuffer.h; sourceTree = "<group>"; };
+		A613FD3F1441A6B500F72B67 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A613FD401441A6B600F72B67 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		A613FD421441A6F100F72B67 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A613FD441441A6FC00F72B67 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A613FD461441A70300F72B67 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A613FD481441A71100F72B67 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A613FD4A1441A71E00F72B67 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A613FD4C1441A77C00F72B67 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A613FD551441AE7400F72B67 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A613FD5C1441CF8F00F72B67 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A613FD5D1441CF8F00F72B67 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A613FD5E1441CF8F00F72B67 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		A613FD9A1441F9E800F72B67 /* MyCLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCLController.h; sourceTree = "<group>"; };
+		A613FD9B1441F9E800F72B67 /* MyCLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCLController.m; sourceTree = "<group>"; };
+		A613FD9E1441FA0800F72B67 /* XMLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLController.h; sourceTree = "<group>"; };
+		A613FD9F1441FA0800F72B67 /* XMLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLController.m; sourceTree = "<group>"; };
+		A613FDA11441FA2700F72B67 /* WeatherCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCollector.m; sourceTree = "<group>"; };
+		A613FDA31441FA3400F72B67 /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		A613FDA41441FA3400F72B67 /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		A613FDA51441FA3400F72B67 /* WeatherCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCollector.h; sourceTree = "<group>"; };
+		A613FDA71441FA4300F72B67 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		A613FDA81441FA4300F72B67 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		A613FDCD1442FDB500F72B67 /* loginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginView.h; sourceTree = "<group>"; };
+		A613FDCE1442FDB500F72B67 /* loginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginView.m; sourceTree = "<group>"; };
+		A613FDCF1442FDB600F72B67 /* loginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginView.xib; sourceTree = "<group>"; };
+		A613FDD5144305F000F72B67 /* UploadGIFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadGIFController.h; sourceTree = "<group>"; };
+		A613FDD6144305F000F72B67 /* UploadGIFController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadGIFController.m; sourceTree = "<group>"; };
+		A613FDD7144305F000F72B67 /* UploadGIFController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadGIFController.xib; sourceTree = "<group>"; };
+		A6E997E4144351FB0050F511 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		A6E997E5144351FB0050F511 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		A6E997E8144352530050F511 /* WeatherReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherReport.h; sourceTree = "<group>"; };
+		A6E997E9144352530050F511 /* WeatherReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherReport.m; sourceTree = "<group>"; };
+		A6E99834144407910050F511 /* PhotoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoData.h; sourceTree = "<group>"; };
+		A6E99835144407910050F511 /* PhotoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoData.m; sourceTree = "<group>"; };
+		A6E99837144412F40050F511 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		A6E99838144412F50050F511 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		A6E99846144447B60050F511 /* AlbumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumController.h; sourceTree = "<group>"; };
+		A6E99847144447B70050F511 /* AlbumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumController.m; sourceTree = "<group>"; };
+		A6E99848144447B90050F511 /* AlbumController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumController.xib; sourceTree = "<group>"; };
+		A6E9985114449BC00050F511 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		A6E9985214449BC50050F511 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		A6E9985B1444A0CD0050F511 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		A6E9985C1444A0CE0050F511 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		A6E998631444ABEA0050F511 /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		A6E998641444ABEA0050F511 /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		A6E998651444ABEA0050F511 /* Setting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Setting.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A613FCB71441969800F72B67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A613FD561441AE7400F72B67 /* MapKit.framework in Frameworks */,
+				A613FD4D1441A77C00F72B67 /* libz.dylib in Frameworks */,
+				A613FD4B1441A71E00F72B67 /* CoreMedia.framework in Frameworks */,
+				A613FD491441A71100F72B67 /* AVFoundation.framework in Frameworks */,
+				A613FD471441A70300F72B67 /* CFNetwork.framework in Frameworks */,
+				A613FD451441A6FC00F72B67 /* SystemConfiguration.framework in Frameworks */,
+				A613FD431441A6F200F72B67 /* MobileCoreServices.framework in Frameworks */,
+				A613FCDE144196B100F72B67 /* CoreLocation.framework in Frameworks */,
+				A613FCBF1441969800F72B67 /* UIKit.framework in Frameworks */,
+				A613FCC11441969800F72B67 /* Foundation.framework in Frameworks */,
+				A613FCC31441969800F72B67 /* CoreGraphics.framework in Frameworks */,
+				A613FCC51441969800F72B67 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A613FCAF1441969800F72B67 = {
+			isa = PBXGroup;
+			children = (
+				A613FCC61441969800F72B67 /* SmartCamera */,
+				A613FCBD1441969800F72B67 /* Frameworks */,
+				A613FCBB1441969800F72B67 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A613FCBB1441969800F72B67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A613FCBA1441969800F72B67 /* SmartCamera.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A613FCBD1441969800F72B67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A613FD551441AE7400F72B67 /* MapKit.framework */,
+				A613FD4C1441A77C00F72B67 /* libz.dylib */,
+				A613FD421441A6F100F72B67 /* MobileCoreServices.framework */,
+				A613FD461441A70300F72B67 /* CFNetwork.framework */,
+				A613FD441441A6FC00F72B67 /* SystemConfiguration.framework */,
+				A613FD481441A71100F72B67 /* AVFoundation.framework */,
+				A613FD4A1441A71E00F72B67 /* CoreMedia.framework */,
+				A613FCDD144196B100F72B67 /* CoreLocation.framework */,
+				A613FCBE1441969800F72B67 /* UIKit.framework */,
+				A613FCC01441969800F72B67 /* Foundation.framework */,
+				A613FCC21441969800F72B67 /* CoreGraphics.framework */,
+				A613FCC41441969800F72B67 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A613FCC61441969800F72B67 /* SmartCamera */ = {
+			isa = PBXGroup;
+			children = (
+				A6E997E4144351FB0050F511 /* Location.h */,
+				A6E997E5144351FB0050F511 /* Location.m */,
+				A6E997E8144352530050F511 /* WeatherReport.h */,
+				A6E997E9144352530050F511 /* WeatherReport.m */,
+				A613FDA71441FA4300F72B67 /* LocationController.h */,
+				A613FDA81441FA4300F72B67 /* LocationController.m */,
+				A613FDA31441FA3400F72B67 /* Weather.h */,
+				A613FDA41441FA3400F72B67 /* Weather.m */,
+				A613FDA51441FA3400F72B67 /* WeatherCollector.h */,
+				A613FDA11441FA2700F72B67 /* WeatherCollector.m */,
+				A613FD9E1441FA0800F72B67 /* XMLController.h */,
+				A613FD9F1441FA0800F72B67 /* XMLController.m */,
+				A613FD9A1441F9E800F72B67 /* MyCLController.h */,
+				A613FD9B1441F9E800F72B67 /* MyCLController.m */,
+				A613FD5C1441CF8F00F72B67 /* DetailViewController.h */,
+				A613FD5D1441CF8F00F72B67 /* DetailViewController.m */,
+				A613FD5E1441CF8F00F72B67 /* DetailViewController.xib */,
+				A613FD3F1441A6B500F72B67 /* MBProgressHUD.h */,
+				A613FD401441A6B600F72B67 /* MBProgressHUD.m */,
+				A613FCCF1441969800F72B67 /* SmartCameraAppDelegate.h */,
+				A613FCD01441969800F72B67 /* SmartCameraAppDelegate.m */,
+				A613FCD21441969800F72B67 /* MainWindow.xib */,
+				A6E99846144447B60050F511 /* AlbumController.h */,
+				A6E99847144447B70050F511 /* AlbumController.m */,
+				A6E99848144447B90050F511 /* AlbumController.xib */,
+				A613FCD51441969900F72B67 /* SmartCamera.xcdatamodeld */,
+				A6E99837144412F40050F511 /* Photo.h */,
+				A6E99838144412F50050F511 /* Photo.m */,
+				A6E99834144407910050F511 /* PhotoData.h */,
+				A6E99835144407910050F511 /* PhotoData.m */,
+				A6E9985114449BC00050F511 /* User.h */,
+				A6E9985214449BC50050F511 /* User.m */,
+				A6E998631444ABEA0050F511 /* Setting.h */,
+				A6E998641444ABEA0050F511 /* Setting.m */,
+				A6E998651444ABEA0050F511 /* Setting.xib */,
+				A613FD191441A37600F72B67 /* GIF */,
+				A613FCF91441A32600F72B67 /* HTTP */,
+				A613FCF61441A2CF00F72B67 /* images */,
+				A613FCC71441969800F72B67 /* Supporting Files */,
+			);
+			path = SmartCamera;
+			sourceTree = "<group>";
+		};
+		A613FCC71441969800F72B67 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A613FCC81441969800F72B67 /* SmartCamera-Info.plist */,
+				A613FCC91441969800F72B67 /* InfoPlist.strings */,
+				A613FCCC1441969800F72B67 /* main.m */,
+				A613FCCE1441969800F72B67 /* SmartCamera-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A613FCF61441A2CF00F72B67 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0129BC1E144737590087FF9C /* sea.jpg */,
+				0129BC1A1446FD270087FF9C /* fisheye.jpg */,
+				0129BC181446F09C0087FF9C /* lomo.jpg */,
+				A613FCF71441A31A00F72B67 /* Checkmark.png */,
+			);
+			name = images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A613FCF91441A32600F72B67 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				A613FCFA1441A36300F72B67 /* Reachability.h */,
+				A613FCFB1441A36300F72B67 /* Reachability.m */,
+				A613FCFC1441A36300F72B67 /* ASIAuthenticationDialog.h */,
+				A613FCFD1441A36300F72B67 /* ASIAuthenticationDialog.m */,
+				A613FCFE1441A36300F72B67 /* ASICacheDelegate.h */,
+				A613FCFF1441A36300F72B67 /* ASIDataCompressor.h */,
+				A613FD001441A36300F72B67 /* ASIDataCompressor.m */,
+				A613FD011441A36300F72B67 /* ASIDataDecompressor.h */,
+				A613FD021441A36300F72B67 /* ASIDataDecompressor.m */,
+				A613FD031441A36300F72B67 /* ASIDownloadCache.h */,
+				A613FD041441A36300F72B67 /* ASIDownloadCache.m */,
+				A613FD051441A36300F72B67 /* ASIFormDataRequest.h */,
+				A613FD061441A36300F72B67 /* ASIFormDataRequest.m */,
+				A613FD071441A36300F72B67 /* ASIHTTPRequest.h */,
+				A613FD081441A36300F72B67 /* ASIHTTPRequest.m */,
+				A613FD091441A36300F72B67 /* ASIHTTPRequestConfig.h */,
+				A613FD0A1441A36300F72B67 /* ASIHTTPRequestDelegate.h */,
+				A613FD0B1441A36300F72B67 /* ASIInputStream.h */,
+				A613FD0C1441A36300F72B67 /* ASIInputStream.m */,
+				A613FD0D1441A36300F72B67 /* ASINetworkQueue.h */,
+				A613FD0E1441A36300F72B67 /* ASINetworkQueue.m */,
+				A613FD0F1441A36300F72B67 /* ASIProgressDelegate.h */,
+			);
+			name = HTTP;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A613FD191441A37600F72B67 /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				A613FD1A1441A3B500F72B67 /* VideoTakingController.xib */,
+				A613FD1B1441A3B500F72B67 /* VideoTakingController.h */,
+				A613FD1C1441A3B500F72B67 /* VideoTakingController.m */,
+				A613FDCD1442FDB500F72B67 /* loginView.h */,
+				A613FDCE1442FDB500F72B67 /* loginView.m */,
+				A613FDCF1442FDB600F72B67 /* loginView.xib */,
+				A613FD1D1441A3B500F72B67 /* GiraffeAppDelegate.h */,
+				A613FD211441A3B500F72B67 /* GiraffeAppDelegate.m */,
+				A613FD221441A3B500F72B67 /* GiraffeViewController.h */,
+				A613FD231441A3B500F72B67 /* GiraffeViewController.m */,
+				A613FD241441A3B500F72B67 /* ANBlock.h */,
+				A613FD251441A3B500F72B67 /* ANBlock.m */,
+				A613FD261441A3B500F72B67 /* ANGifBitmap.h */,
+				A613FD271441A3B500F72B67 /* ANGifBitmap.m */,
+				A613FD281441A3B500F72B67 /* ANGifEncoder.h */,
+				A613FD291441A3B500F72B67 /* ANGifEncoder.m */,
+				A613FD2A1441A3B500F72B67 /* ANGifPalette.h */,
+				A613FD2B1441A3B500F72B67 /* ANGifPalette.m */,
+				A613FD2C1441A3B500F72B67 /* ANImageBitmapRep.h */,
+				A613FD2D1441A3B500F72B67 /* ANImageBitmapRep.m */,
+				A613FD2E1441A3B500F72B67 /* ANPoint.h */,
+				A613FD2F1441A3B500F72B67 /* ANPoint.m */,
+				A613FD301441A3B500F72B67 /* BitBuffer.m */,
+				A613FD311441A3B500F72B67 /* BitBuffer.h */,
+				A613FDD5144305F000F72B67 /* UploadGIFController.h */,
+				A613FDD6144305F000F72B67 /* UploadGIFController.m */,
+				A6E9985B1444A0CD0050F511 /* FileManager.h */,
+				A6E9985C1444A0CE0050F511 /* FileManager.m */,
+				A613FDD7144305F000F72B67 /* UploadGIFController.xib */,
+			);
+			name = GIF;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A613FCB91441969800F72B67 /* SmartCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A613FCDA1441969900F72B67 /* Build configuration list for PBXNativeTarget "SmartCamera" */;
+			buildPhases = (
+				A613FCB61441969800F72B67 /* Sources */,
+				A613FCB71441969800F72B67 /* Frameworks */,
+				A613FCB81441969800F72B67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartCamera;
+			productName = SmartCamera;
+			productReference = A613FCBA1441969800F72B67 /* SmartCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A613FCB11441969800F72B67 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = A613FCB41441969800F72B67 /* Build configuration list for PBXProject "SmartCamera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A613FCAF1441969800F72B67;
+			productRefGroup = A613FCBB1441969800F72B67 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A613FCB91441969800F72B67 /* SmartCamera */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A613FCB81441969800F72B67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A613FCCB1441969800F72B67 /* InfoPlist.strings in Resources */,
+				A613FCD41441969800F72B67 /* MainWindow.xib in Resources */,
+				A613FCF81441A31A00F72B67 /* Checkmark.png in Resources */,
+				A613FD321441A3B500F72B67 /* VideoTakingController.xib in Resources */,
+				A613FD601441CF8F00F72B67 /* DetailViewController.xib in Resources */,
+				A613FDD11442FDB600F72B67 /* loginView.xib in Resources */,
+				A613FDD9144305F100F72B67 /* UploadGIFController.xib in Resources */,
+				A6E9984A144447BD0050F511 /* AlbumController.xib in Resources */,
+				A6E998671444ABEA0050F511 /* Setting.xib in Resources */,
+				0129BC191446F09C0087FF9C /* lomo.jpg in Resources */,
+				0129BC1B1446FD270087FF9C /* fisheye.jpg in Resources */,
+				0129BC1F144737590087FF9C /* sea.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A613FCB61441969800F72B67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A613FCCD1441969800F72B67 /* main.m in Sources */,
+				A613FCD11441969800F72B67 /* SmartCameraAppDelegate.m in Sources */,
+				A613FCD71441969900F72B67 /* SmartCamera.xcdatamodeld in Sources */,
+				A613FD101441A36300F72B67 /* Reachability.m in Sources */,
+				A613FD111441A36300F72B67 /* ASIAuthenticationDialog.m in Sources */,
+				A613FD121441A36300F72B67 /* ASIDataCompressor.m in Sources */,
+				A613FD131441A36300F72B67 /* ASIDataDecompressor.m in Sources */,
+				A613FD141441A36300F72B67 /* ASIDownloadCache.m in Sources */,
+				A613FD151441A36300F72B67 /* ASIFormDataRequest.m in Sources */,
+				A613FD161441A36300F72B67 /* ASIHTTPRequest.m in Sources */,
+				A613FD171441A36300F72B67 /* ASIInputStream.m in Sources */,
+				A613FD181441A36300F72B67 /* ASINetworkQueue.m in Sources */,
+				A613FD331441A3B500F72B67 /* VideoTakingController.m in Sources */,
+				A613FD361441A3B500F72B67 /* GiraffeAppDelegate.m in Sources */,
+				A613FD371441A3B500F72B67 /* GiraffeViewController.m in Sources */,
+				A613FD381441A3B500F72B67 /* ANBlock.m in Sources */,
+				A613FD391441A3B500F72B67 /* ANGifBitmap.m in Sources */,
+				A613FD3A1441A3B500F72B67 /* ANGifEncoder.m in Sources */,
+				A613FD3B1441A3B500F72B67 /* ANGifPalette.m in Sources */,
+				A613FD3C1441A3B500F72B67 /* ANImageBitmapRep.m in Sources */,
+				A613FD3D1441A3B500F72B67 /* ANPoint.m in Sources */,
+				A613FD3E1441A3B500F72B67 /* BitBuffer.m in Sources */,
+				A613FD411441A6B600F72B67 /* MBProgressHUD.m in Sources */,
+				A613FD5F1441CF8F00F72B67 /* DetailViewController.m in Sources */,
+				A613FD9C1441F9E800F72B67 /* MyCLController.m in Sources */,
+				A613FDA01441FA0800F72B67 /* XMLController.m in Sources */,
+				A613FDA21441FA2700F72B67 /* WeatherCollector.m in Sources */,
+				A613FDA61441FA3400F72B67 /* Weather.m in Sources */,
+				A613FDA91441FA4300F72B67 /* LocationController.m in Sources */,
+				A613FDD01442FDB600F72B67 /* loginView.m in Sources */,
+				A613FDD8144305F100F72B67 /* UploadGIFController.m in Sources */,
+				A6E997E6144351FB0050F511 /* Location.m in Sources */,
+				A6E997EA144352530050F511 /* WeatherReport.m in Sources */,
+				A6E99836144407910050F511 /* PhotoData.m in Sources */,
+				A6E99839144412F50050F511 /* Photo.m in Sources */,
+				A6E99849144447BD0050F511 /* AlbumController.m in Sources */,
+				A6E9985314449BC70050F511 /* User.m in Sources */,
+				A6E9985D1444A0CE0050F511 /* FileManager.m in Sources */,
+				A6E998661444ABEA0050F511 /* Setting.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A613FCC91441969800F72B67 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A613FCCA1441969800F72B67 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A613FCD21441969800F72B67 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A613FCD31441969800F72B67 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A613FCD81441969900F72B67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A613FCD91441969900F72B67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A613FCDB1441969900F72B67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartCamera/SmartCamera-Prefix.pch";
+				INFOPLIST_FILE = "SmartCamera/SmartCamera-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A613FCDC1441969900F72B67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SmartCamera/SmartCamera-Prefix.pch";
+				INFOPLIST_FILE = "SmartCamera/SmartCamera-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A613FCB41441969800F72B67 /* Build configuration list for PBXProject "SmartCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A613FCD81441969900F72B67 /* Debug */,
+				A613FCD91441969900F72B67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A613FCDA1441969900F72B67 /* Build configuration list for PBXNativeTarget "SmartCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A613FCDB1441969900F72B67 /* Debug */,
+				A613FCDC1441969900F72B67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A613FCD51441969900F72B67 /* SmartCamera.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A613FCD61441969900F72B67 /* SmartCamera.xcdatamodel */,
+			);
+			currentVersion = A613FCD61441969900F72B67 /* SmartCamera.xcdatamodel */;
+			path = SmartCamera.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A613FCB11441969800F72B67 /* Project object */;
+}
