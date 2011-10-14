@@ -10,6 +10,7 @@
 		0129BC191446F09C0087FF9C /* lomo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0129BC181446F09C0087FF9C /* lomo.jpg */; };
 		0129BC1B1446FD270087FF9C /* fisheye.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0129BC1A1446FD270087FF9C /* fisheye.jpg */; };
 		0129BC1F144737590087FF9C /* sea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0129BC1E144737590087FF9C /* sea.jpg */; };
+		01EC30B21447D7C000AA7802 /* camera-k-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 01EC30B11447D7C000AA7802 /* camera-k-57x57.png */; };
 		A613FCBF1441969800F72B67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FCBE1441969800F72B67 /* UIKit.framework */; };
 		A613FCC11441969800F72B67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FCC01441969800F72B67 /* Foundation.framework */; };
 		A613FCC31441969800F72B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A613FCC21441969800F72B67 /* CoreGraphics.framework */; };
@@ -81,6 +82,7 @@
 		0129BC181446F09C0087FF9C /* lomo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lomo.jpg; path = SmartCamera/lomo.jpg; sourceTree = "<group>"; };
 		0129BC1A1446FD270087FF9C /* fisheye.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fisheye.jpg; sourceTree = "<group>"; };
 		0129BC1E144737590087FF9C /* sea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sea.jpg; sourceTree = "<group>"; };
+		01EC30B11447D7C000AA7802 /* camera-k-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-k-57x57.png"; sourceTree = "<group>"; };
 		A613FCBA1441969800F72B67 /* SmartCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A613FCBE1441969800F72B67 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A613FCC01441969800F72B67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -218,6 +220,7 @@
 		A613FCAF1441969800F72B67 = {
 			isa = PBXGroup;
 			children = (
+				01EC30B11447D7C000AA7802 /* camera-k-57x57.png */,
 				A613FCC61441969800F72B67 /* SmartCamera */,
 				A613FCBD1441969800F72B67 /* Frameworks */,
 				A613FCBB1441969800F72B67 /* Products */,
@@ -455,6 +458,7 @@
 				A6E6DB4E14474AA7008EA5C6 /* album.png in Resources */,
 				A6E6DB5214474D6C008EA5C6 /* Icon_Small.png in Resources */,
 				A6E6DB5314474D6C008EA5C6 /* Icon.png in Resources */,
+				01EC30B21447D7C000AA7802 /* camera-k-57x57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

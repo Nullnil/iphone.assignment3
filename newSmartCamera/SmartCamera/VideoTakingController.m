@@ -239,6 +239,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
 }
 
+
 #define DEFAULTBACKGROUNDIMG @"lomo.jpg"
 
 - (void)viewDidLoad
@@ -413,7 +414,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info{
     for( UIImage* im in self.images ){
         
         /* increment progress */
-        progress += ((float)i)/(self.images.count*2);
+        progress = ((float)i)/(self.images.count*2);
         NSLog(@"%f\n", progress);
         self.HUD.progress = progress;
         
